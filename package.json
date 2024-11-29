@@ -9,6 +9,7 @@
     "dev": "nodemon ./server.js",
     "insertDataReactions": "node ./models/data/reactions.js",
     "dataUser": "node ./models/data/users.js",
+    "dataMangas": "node ./models/data/mangas.js",
     "dataAuthor": "node ./models/data/authors.js",
     "dataCompany": "node ./models/data/companies.js",
     "dataCategory":"node ./models/data/categories.js",

@@ -1,7 +1,7 @@
 const not_found_handler = (req, res, next) => {
     return res.status(404).json({
         success: false,
-        message: `Ruta no encontrada - Error 404: El método '${req.method}' para la ruta '${req.originalUrl}' no existe.`,
+        message: `Route not found - Error 404: Method '${req.method}' for route '${req.originalUrl}' does not exist.`,
         timestamp: new Date().toISOString(),
         requestUrl: req.originalUrl,
         requestMethod: req.method

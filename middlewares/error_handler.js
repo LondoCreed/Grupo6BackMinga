@@ -1,7 +1,7 @@
 const error_handler = (error, req, res) => {
     return res.status(500).json({
         success: false,
-        message: `Error 500 - Se ha producido un error interno del servidor en la ruta '${req.originalUrl}' utilizando el método '${req.method}'. Detalles: ${error.message || 'Error desconocido'}`,
+        message: `Error 500 - An internal server error occurred on the route '${req.originalUrl}' using the '${req.method}' method. Details: ${error.message || 'Unknown error'}`,
         timestamp: new Date().toISOString(),
         requestUrl: req.originalUrl,
         requestMethod: req.method

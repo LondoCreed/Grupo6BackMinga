@@ -1,8 +1,9 @@
-import "dotenv/config.js"
-import "../../config/database.js"
+import "dotenv/config.js" 
+import '../../config/database.js'
 import Manga from "../Manga.js"
 import Chapter from "../Chapter.js"
 import Category from "../Category.js"
+import Company from "../Company.js"
 import Author from "../Author.js"
 
 let mangas = [
@@ -10,8 +11,8 @@ let mangas = [
         title: 'Alice in Borderland',
         cover_photo: 'https://i.postimg.cc/PqQHYqrL/main-alice-in-borderland.jpg',
         description: 'Arisu Ryouhei will be leaving high school soon, but he tries to avoid thinking about his future. One night, when he is with his partner Karube and his friend Chouta, they see some fireworks. After a blinding explosion, they wake up in another world, called Borderland. Here people are forced to participate in violent games, where the participants must fight to survive. Will Arisu, Karube and Chouta be able to survive in this dangerous new world and find their way back to their true world?',
-        category_id: 'shonen',
-        author_id: 'alejandro',
+        category_id: 'Shonen',
+        author_id: 'John', // alejandro por John
         chapters: [
             {
                 title: 'Welcome - part 1',
@@ -23,6 +24,7 @@ let mangas = [
                 order: 2,
             },{
                 title: '3 of clubs - part 1',
+                cover_photo: '',
                 pages: ['https://i.postimg.cc/QC84WXYq/alice-in-borderland-003-01.jpg','https://i.postimg.cc/5ysPBZZW/alice-in-borderland-003-02.jpg','https://i.postimg.cc/5t8n7HZ3/alice-in-borderland-003-03.jpg','https://i.postimg.cc/W1B5wmfz/alice-in-borderland-003-04.jpg','https://i.postimg.cc/15z7m3qm/alice-in-borderland-003-05.jpg','https://i.postimg.cc/VLHGdPqj/alice-in-borderland-003-06.jpg','https://i.postimg.cc/7ZGBzt9j/alice-in-borderland-003-07.jpg','https://i.postimg.cc/qBwZH3gD/alice-in-borderland-003-08.jpg','https://i.postimg.cc/PxhKBXHk/alice-in-borderland-003-09.jpg','https://i.postimg.cc/KzNQb6c3/alice-in-borderland-003-10.jpg','https://i.postimg.cc/kGgsgTD1/alice-in-borderland-003-11.jpg','https://i.postimg.cc/QCYb9cTX/alice-in-borderland-003-12.jpg','https://i.postimg.cc/ZK0jksG0/alice-in-borderland-003-13.jpg','https://i.postimg.cc/MZ9tFJrh/alice-in-borderland-003-14.jpg','https://i.postimg.cc/jd9cRQTc/alice-in-borderland-003-15.jpg','https://i.postimg.cc/CxqN5BLg/alice-in-borderland-003-16.jpg','https://i.postimg.cc/CKp4qhzf/alice-in-borderland-003-17.jpg','https://i.postimg.cc/PqbQbgwV/alice-in-borderland-003-18.jpg','https://i.postimg.cc/qRkX11cJ/alice-in-borderland-003-19.jpg','https://i.postimg.cc/NMp8SRb1/alice-in-borderland-003-20.jpg','https://i.postimg.cc/mkk3sh6K/alice-in-borderland-003-21.jpg','https://i.postimg.cc/9XgtBtD2/alice-in-borderland-003-22.jpg','https://i.postimg.cc/8cYRPD2c/alice-in-borderland-003-23.jpg','https://i.postimg.cc/657Vb2Zv/alice-in-borderland-003-24.jpg','https://i.postimg.cc/Fs2yMrbn/alice-in-borderland-003-25.jpg','https://i.postimg.cc/7Z03DFmP/alice-in-borderland-003-26.jpg','https://i.postimg.cc/d0F805x2/alice-in-borderland-003-27.jpg','https://i.postimg.cc/k5yWRW0k/alice-in-borderland-003-28.jpg','https://i.postimg.cc/FRs3y7m1/alice-in-borderland-003-29.jpg','https://i.postimg.cc/xCxHtnT5/alice-in-borderland-003-30.jpg','https://i.postimg.cc/Gt4DfV4C/alice-in-borderland-003-31.jpg','https://i.postimg.cc/HWNXMYNs/alice-in-borderland-003-32.jpg','https://i.postimg.cc/28Bv7ppd/alice-in-borderland-003-33.jpg','https://i.postimg.cc/fRndHHZG/alice-in-borderland-003-34.jpg','https://i.postimg.cc/Mp7Qgypv/alice-in-borderland-003-35.jpg','https://i.postimg.cc/zfqgNVyp/alice-in-borderland-003-36.jpg','https://i.postimg.cc/g0462mRp/alice-in-borderland-003-37.jpg','https://i.postimg.cc/Kzz3KwrM/alice-in-borderland-003-38.jpg','https://i.postimg.cc/Y9sGQRby/alice-in-borderland-003-39.jpg','https://i.postimg.cc/WzqD8Zyp/alice-in-borderland-003-40.jpg','https://i.postimg.cc/BtWjV6WT/alice-in-borderland-003-41.jpg','https://i.postimg.cc/J7sKv2V0/alice-in-borderland-003-42.jpg'],
                 order: 3,
             },{
@@ -63,8 +65,8 @@ let mangas = [
         title: 'Shingeki no Kyojin',
         cover_photo: 'https://i.postimg.cc/Nj4bXyr2/main-shingeki-no-kyojin.png',
         description: '100 years ago Titans appeared on earth. Soon the civilization was at the point of collapse because of these, the humans then built three giant walls to defend themselves. With the walls they were at peace but, after 100 years, the giants broke down the walls.',
-        category_id: 'shonen',
-        author_id: 'lucas',
+        category_id: 'Shonen',
+        company_id: 'Creative Minds',
         chapters: [
             {
                 title: 'Titans attack',
@@ -108,8 +110,8 @@ let mangas = [
         title: 'The promise neverland',
         cover_photo: 'https://i.postimg.cc/85YdTMfM/main-the-promise-neverland.jpg',
         description: 'Emma, Norman and Ray are three orphans who live happily in the idyllic Grace Field House orphanage, waiting for the moment when they will be assigned a foster family. Everything changes when they accidentally discover the horrifying reality of their existence, so they decide to rebel and fight to the last consequences in a dark and terrifying adventure. But his time is running out...',
-        category_id: 'shonen',
-        author_id: 'lucas',
+        category_id: 'Shonen',
+        company_id: 'Creative Minds',
         chapters: [
             {
                 title: 'Grace Field Home',
@@ -157,8 +159,8 @@ let mangas = [
         title: 'Bleach',
         cover_photo: 'https://i.postimg.cc/MGThBm3N/main-bleach.jpg',
         description: 'edit later',
-        category_id: 'shonen',
-        author_id: 'eric',
+        category_id: 'Shonen',
+        author_id: 'Jane',
         chapters: [
             {
                 title: 'Death & Strawberry',
@@ -206,8 +208,8 @@ let mangas = [
         title: 'Another',
         cover_photo: 'https://i.postimg.cc/j5kdphLr/main-another.jpg',
         description: 'This story revolves around a curse that affects class 3-3 of Yomiyama High School. It all begins when the protagonist, Kōichi Sakakibara, moves to this school and meets Mei Misaki, a girl who is ignored by her classmates due to a supposed curse that weighs on her. As Kōichi becomes more involved in the mystery surrounding class 3-3, he discovers that a student in the class died 26 years ago, and that every year someone in that class mysteriously dies since then. Kōichi and Mei try to uncover the truth behind the curse and end the wave of death while fighting the danger that lurks around them.',
-        category_id: 'seinen',
-        author_id: 'eric',
+        category_id: 'Seinen',
+        author_id: 'Jane',
         chapters: [
             {
                 title: 'I',
@@ -255,8 +257,8 @@ let mangas = [
         title: 'Gantz',
         cover_photo: 'https://i.postimg.cc/26z0Z0yQ/YHEVOBAXLFF4-FC55-L2-HJ2-JPS4-E.jpg',
         description: 'This is a sci-fi action story that follows a group of people who have been brought back to life by a mysterious sphere called Gantz and forced to participate in dangerous missions against strange and dangerous creatures. It all starts when the protagonist, Kei Kurono, is killed in an accident and is revived by Gantz along with other people who have recently died. As they fight to survive and complete Gantz´s missions, Kei and his companions discover that there is much more at stake than just their own lives.',
-        category_id: 'seinen',
-        author_id: 'lucas',
+        category_id: 'Seinen',
+        company_id: 'Creative Minds',
         chapters: [
             {
                 title: 'I',
@@ -304,8 +306,8 @@ let mangas = [
         title: 'Punpun',
         cover_photo: 'https://i.postimg.cc/xCsc02ph/main-buenasnochespunpun.jpg',
         description: 'This story follows the life of Onodera Punpun, a high school boy who struggles with emotional issues and family problems as he tries to grow up and find his place in the world. Punpun is not your typical elementary school student. Despite the fact that he feels the same impulses as his peers, he begins to discover girls and sex, the family situation is not the most stable and he must face it as best he can... and in principle, that is visualizing himself as an amorphous bird in a strange environment.',
-        category_id: 'seinen',
-        author_id: 'lucas',
+        category_id: 'Seinen',
+        company_id: 'Creative Minds',
         chapters: [
             {
                 title: '1',
@@ -353,8 +355,8 @@ let mangas = [
         title: 'Flashpoint',
         cover_photo: 'https://i.postimg.cc/bJjf6Q43/main-flashpoint.jpg',
         description: 'edit later',
-        category_id: 'comics',
-        author_id: 'eric',
+        category_id: 'Kodomo',
+        author_id: 'Jane',
         chapters: [
             {
                 title: 'Chapter 1',
@@ -382,8 +384,8 @@ let mangas = [
         title: 'Planet Hulk',
         cover_photo: 'https://i.postimg.cc/V6HWZ9k2/main-planet-hulk.jpg',
         description: 'edit later',
-        category_id: 'comics',
-        author_id: 'eric',
+        category_id: 'Kodomo',
+        author_id: 'Jane',
         chapters: [
             {
                 title: 'Chapter 1',
@@ -431,8 +433,8 @@ let mangas = [
         title: 'Secret invasion',
         cover_photo: 'https://i.postimg.cc/hjG00Zc9/main-secret-invasion.jpg',
         description: 'edit later',
-        category_id: 'comics',
-        author_id: 'alejandro',
+        category_id: 'Kodomo',
+        author_id: 'John',
         chapters: [
             {
                 title: 'Chapter 1',
@@ -476,8 +478,8 @@ let mangas = [
         title: 'Superman up in the sky',
         cover_photo: 'https://i.postimg.cc/g0XV2hSy/superman-sky-001-01.jpg',
         description: 'edit later',
-        category_id: 'comics',
-        author_id: 'alejandro',
+        category_id: 'Kodomo',
+        author_id: 'John',
         chapters: [
             {
                 title: 'Chapter 1',
@@ -509,8 +511,8 @@ let mangas = [
         title: 'World War Hulk',
         cover_photo: 'https://i.postimg.cc/cHtX22GS/main-world-war-hulk.jpg',
         description: 'edit later',
-        category_id: 'comics',
-        author_id: 'eric',
+        category_id: 'Kodomo',
+        author_id: 'Jane',
         chapters: [
             {
                 title: 'Chapter 1',
@@ -538,8 +540,8 @@ let mangas = [
         title: 'Pokemon',
         cover_photo: 'https://i.postimg.cc/3xPP69GH/201-2011893-pokmon-adventures-special-pokemon-adventures-book-volume-3.jpg',
         description: 'edit later',
-        category_id: 'shonen',
-        author_id: 'lucas',
+        category_id: 'Shonen',
+        company_id: 'Creative Minds',
         chapters: [
             {
                 title: 'Red',
@@ -603,8 +605,8 @@ let mangas = [
         title: 'Citrus',
         cover_photo: 'https://i.postimg.cc/WpgtffJs/citrus-anime-temporada-2-yuri-jpg-743561205.jpg',
         description: 'edit later',
-        category_id: 'shojo',
-        author_id: 'lucas',
+        category_id: 'Shojo',
+        company_id: 'Creative Minds',
         chapters: [
             {
                 title: 'Chapter 1',
@@ -660,8 +662,8 @@ let mangas = [
         title: 'Ao Haru Ride',
         cover_photo: 'https://i.postimg.cc/ydWYPLCC/ao-haru-ride-752359695-large.jpg',
         description: 'edit later',
-        category_id: 'shojo',
-        author_id: 'eric',
+        category_id: 'Shojo',
+        author_id: 'Jane',
         chapters: [
             {
                 title: '001',
@@ -700,21 +702,55 @@ let mangas = [
     }
 ]
 
-let insert_mangas = async()=> {
-    for (let manga of mangas) {
-        let author = await Author.findOne({ name:manga.author_id })
-        manga.author_id = await author._id
-        let category = await Category.findOne({ name:manga.category_id })
-        manga.category_id = await category._id
-        let one = await Manga.create(manga)
-        console.log('id of '+one.title+': '+one._id)
-        for (let chapter of manga.chapters) {
-            chapter.manga_id = one._id
-            chapter.cover_photo = chapter.pages[0]
-            await Chapter.create(chapter)
+let insert_mangas = async () => {
+    try {
+        for (let manga of mangas) {
+            // Validar si tiene autor o compañía
+            if (!manga.author_id && !manga.company_id) {
+                throw new Error(`Manga "${manga.title}" must have either an author or a company`)
+            }
+
+            // Buscar el autor (si existe)
+            if (manga.author_id) {
+                let author = await Author.findOne({ name: manga.author_id })
+                if (!author) {
+                    throw new Error(`Author not found: ${manga.author_id}`)
+                }
+                manga.author_id = author._id
+            }
+
+            // Buscar la compañía (si existe)
+            if (manga.company_id) {
+                let company = await Company.findOne({ name: manga.company_id })
+                if (!company) {
+                    throw new Error(`Company not found: ${manga.company_id}`)
+                }
+                manga.company_id = company._id
+            }
+
+            // Buscar la categoría
+            let category = await Category.findOne({ name: manga.category_id })
+            if (!category) {
+                throw new Error(`Category not found: ${manga.category_id}`)
+            }
+            manga.category_id = category._id
+
+            // Crear el manga
+            let one = await Manga.create(manga)
+            console.log(`ID of ${one.title}: ${one._id}`)
+
+            // Crear los capítulos asociados
+            for (let chapter of manga.chapters) {
+                chapter.manga_id = one._id
+                chapter.cover_photo = chapter.pages[0] // Primera página como portada
+                await Chapter.create(chapter)
+            }
+            console.log(`${one.title} & chapters created!`)
         }
-        console.log(one.title+' & chapters created!')
+        console.log('done!')
+    } catch (error) {
+        console.error('Error inserting mangas:', error.message)
     }
-    console.log('done!')
 }
 insert_mangas()
+
