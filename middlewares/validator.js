@@ -1,4 +1,5 @@
 
+
 const validator = (schema)=>[
     (req,res,next)=>{
         const validation = schema.validate(req.body,{abortEarly:false})
@@ -10,6 +11,5 @@ const validator = (schema)=>[
         }
         next()
     }
-]
-
+    ]
 export default validator

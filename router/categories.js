@@ -1,8 +1,8 @@
 import { Router } from "express"
-import { allCategories } from "../controladores/Categories/read.js"
-import { categoryCreated } from "../controladores/Categories/create.js"
-import {updateCategory} from "../controladores/Categories/update.js"
-import {deletedCategory} from "../controladores/Categories/deleted.js"
+import { allCategories } from "../controllers/Categories/read.js"
+import { categoryCreated } from "../controllers/Categories/create.js"
+import {updateCategory} from "../controllers/Categories/update.js"
+import {deletedCategory} from "../controllers/Categories/deleted.js"
 import validator from "../middlewares/validator.js"
 import schemaCategory from "../schemas/category/create.js"
 

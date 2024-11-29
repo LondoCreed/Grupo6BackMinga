@@ -1,8 +1,8 @@
 import { Router } from "express"
-import { allComments } from "../controladores/Comments/read.js"
-import { commentCreated } from "../controladores/Comments/create.js"
-import { updateComment } from "../controladores/Comments/update.js"
-import { deletedComment } from "../controladores/Comments/deleted.js"
+import { allComments } from "../controllers/Comments/read.js"
+import { commentCreated } from "../controllers/Comments/create.js"
+import { updateComment } from "../controllers/Comments/update.js"
+import { deletedComment } from "../controllers/Comments/deleted.js"
 import validator from "../middlewares/validator.js"
 import schemaComment from "../schemas/comment/create.js"
 
