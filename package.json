@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node ./server.js",
+    "dataP": "node ./models/data/users.js",
     "dev": "nodemon ./server.js"
   },
   "keywords": [],
