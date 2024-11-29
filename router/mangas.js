@@ -1,8 +1,8 @@
 import { Router } from "express"
-import { all, mangaByID } from "../controllers/manga/read.js"
-import { deleteOne, deleteMany, deleteByID } from "../controllers/manga/delete.js"
-import { updateOne, updateMany, updateByID} from "../controllers/manga/update.js"
-import create from "../controllers/manga/create.js"
+import { all, mangaByID } from "../controllers/mangas/read.js"
+import { deleteOne, deleteMany, deleteByID } from "../controllers/mangas/delete.js"
+import { updateOne, updateMany, updateByID} from "../controllers/mangas/update.js"
+import {create }from "../controllers/mangas/create.js"
 const router = Router()
 
 router.get("/all", all)

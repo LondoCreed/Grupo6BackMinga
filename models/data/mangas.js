@@ -3,7 +3,7 @@ import '../../config/database.js'
 import Manga from "../Manga.js"
 import Chapter from "../Chapter.js"
 import Category from "../Category.js"
-import Company from "../Category.js"
+import Company from "../Company.js"
 import Author from "../Author.js"
 
 let mangas = [
@@ -11,62 +11,52 @@ let mangas = [
         title: 'Alice in Borderland',
         cover_photo: 'https://i.postimg.cc/PqQHYqrL/main-alice-in-borderland.jpg',
         description: 'Arisu Ryouhei will be leaving high school soon, but he tries to avoid thinking about his future. One night, when he is with his partner Karube and his friend Chouta, they see some fireworks. After a blinding explosion, they wake up in another world, called Borderland. Here people are forced to participate in violent games, where the participants must fight to survive. Will Arisu, Karube and Chouta be able to survive in this dangerous new world and find their way back to their true world?',
-        category_id: 'shonen',
-        author_id: 'alejandro',
+        category_id: 'Shonen',
+        author_id: 'John', // alejandro por John
         chapters: [
             {
                 title: 'Welcome - part 1',
-                cover_photo: 'https://i.postimg.cc/q76GttJr/alice-in-borderland-001-01.jpg',
                 pages: ['https://i.postimg.cc/q76GttJr/alice-in-borderland-001-01.jpg','https://i.postimg.cc/c41MRkxX/alice-in-borderland-001-02.jpg','https://i.postimg.cc/wvhcVSRb/alice-in-borderland-001-03.jpg','https://i.postimg.cc/Zn4PDVrY/alice-in-borderland-001-04.jpg','https://i.postimg.cc/SNZLDLjq/alice-in-borderland-001-05.jpg','https://i.postimg.cc/GmHFNBsD/alice-in-borderland-001-06.jpg','https://i.postimg.cc/nVGGQfJX/alice-in-borderland-001-07.jpg','https://i.postimg.cc/QCmgL1bQ/alice-in-borderland-001-08.jpg','https://i.postimg.cc/JzvNW1b2/alice-in-borderland-001-09.jpg','https://i.postimg.cc/8k4LzdRW/alice-in-borderland-001-10.jpg','https://i.postimg.cc/SNKC2XdP/alice-in-borderland-001-11.jpg','https://i.postimg.cc/BnrKVm3W/alice-in-borderland-001-12.jpg','https://i.postimg.cc/g03ZF3cx/alice-in-borderland-001-13.jpg','https://i.postimg.cc/zB5RJ330/alice-in-borderland-001-14.jpg','https://i.postimg.cc/4y2Kb5PS/alice-in-borderland-001-15.jpg','https://i.postimg.cc/fyRt9Fcd/alice-in-borderland-001-16.jpg','https://i.postimg.cc/QtbKVsTs/alice-in-borderland-001-17.jpg','https://i.postimg.cc/kMTtmJCv/alice-in-borderland-001-18.jpg','https://i.postimg.cc/TYh52zYM/alice-in-borderland-001-19.jpg','https://i.postimg.cc/9FSRDLr4/alice-in-borderland-001-20.jpg','https://i.postimg.cc/4x9KVp9W/alice-in-borderland-001-21.jpg','https://i.postimg.cc/1z18H40s/alice-in-borderland-001-22.jpg','https://i.postimg.cc/CLZdpbmw/alice-in-borderland-001-23.jpg','https://i.postimg.cc/mr3t6RVM/alice-in-borderland-001-24.jpg','https://i.postimg.cc/nzHMy5wW/alice-in-borderland-001-25.jpg','https://i.postimg.cc/c4VCx6bw/alice-in-borderland-001-26.jpg','https://i.postimg.cc/cHX60mpL/alice-in-borderland-001-27.jpg','https://i.postimg.cc/qqqqRKrX/alice-in-borderland-001-28.jpg','https://i.postimg.cc/fWqkP87H/alice-in-borderland-001-29.jpg','https://i.postimg.cc/6qP3GQ5s/alice-in-borderland-001-30.jpg','https://i.postimg.cc/dVr1LvbX/alice-in-borderland-001-31.jpg'],
                 order: 1,
             },{
                 title: 'Welcome - part 2',
-                cover_photo: 'https://i.postimg.cc/jScjzvjQ/alice-in-borderland-002-01.jpg',
                 pages: ['https://i.postimg.cc/jScjzvjQ/alice-in-borderland-002-01.jpg','https://i.postimg.cc/rppwgW06/alice-in-borderland-002-02.jpg','https://i.postimg.cc/pd1XSTzm/alice-in-borderland-002-03.jpg','https://i.postimg.cc/VLjvNzQh/alice-in-borderland-002-04.jpg','https://i.postimg.cc/8zN5JxTz/alice-in-borderland-002-05.jpg','https://i.postimg.cc/vBgHwst3/alice-in-borderland-002-06.jpg','https://i.postimg.cc/Bb2StByF/alice-in-borderland-002-07.jpg','https://i.postimg.cc/nzyVHPdZ/alice-in-borderland-002-08.jpg','https://i.postimg.cc/G3DhMb2p/alice-in-borderland-002-09.jpg','https://i.postimg.cc/9FjXKsRY/alice-in-borderland-002-10.jpg','https://i.postimg.cc/X7cNbx9S/alice-in-borderland-002-11.jpg','https://i.postimg.cc/rwVVFW9d/alice-in-borderland-002-12.jpg','https://i.postimg.cc/9M7VNBck/alice-in-borderland-002-13.jpg','https://i.postimg.cc/6pM973HM/alice-in-borderland-002-14.jpg','https://i.postimg.cc/TPSf9svm/alice-in-borderland-002-15.jpg','https://i.postimg.cc/bvdq1hWp/alice-in-borderland-002-16.jpg','https://i.postimg.cc/j2YKVJ5S/alice-in-borderland-002-17.jpg','https://i.postimg.cc/Kj7bmvkr/alice-in-borderland-002-18.jpg','https://i.postimg.cc/SQck6VT2/alice-in-borderland-002-19.jpg','https://i.postimg.cc/X733QFm2/alice-in-borderland-002-20.jpg','https://i.postimg.cc/BQg3ybGJ/alice-in-borderland-002-21.jpg','https://i.postimg.cc/Jzz8W81Z/alice-in-borderland-002-22.jpg','https://i.postimg.cc/Mp3S6LT4/alice-in-borderland-002-23.jpg'],
                 order: 2,
             },{
                 title: '3 of clubs - part 1',
-                cover_photo: 'https://i.postimg.cc/QC84WXYq/alice-in-borderland-003-01.jpg',
+                cover_photo: '',
                 pages: ['https://i.postimg.cc/QC84WXYq/alice-in-borderland-003-01.jpg','https://i.postimg.cc/5ysPBZZW/alice-in-borderland-003-02.jpg','https://i.postimg.cc/5t8n7HZ3/alice-in-borderland-003-03.jpg','https://i.postimg.cc/W1B5wmfz/alice-in-borderland-003-04.jpg','https://i.postimg.cc/15z7m3qm/alice-in-borderland-003-05.jpg','https://i.postimg.cc/VLHGdPqj/alice-in-borderland-003-06.jpg','https://i.postimg.cc/7ZGBzt9j/alice-in-borderland-003-07.jpg','https://i.postimg.cc/qBwZH3gD/alice-in-borderland-003-08.jpg','https://i.postimg.cc/PxhKBXHk/alice-in-borderland-003-09.jpg','https://i.postimg.cc/KzNQb6c3/alice-in-borderland-003-10.jpg','https://i.postimg.cc/kGgsgTD1/alice-in-borderland-003-11.jpg','https://i.postimg.cc/QCYb9cTX/alice-in-borderland-003-12.jpg','https://i.postimg.cc/ZK0jksG0/alice-in-borderland-003-13.jpg','https://i.postimg.cc/MZ9tFJrh/alice-in-borderland-003-14.jpg','https://i.postimg.cc/jd9cRQTc/alice-in-borderland-003-15.jpg','https://i.postimg.cc/CxqN5BLg/alice-in-borderland-003-16.jpg','https://i.postimg.cc/CKp4qhzf/alice-in-borderland-003-17.jpg','https://i.postimg.cc/PqbQbgwV/alice-in-borderland-003-18.jpg','https://i.postimg.cc/qRkX11cJ/alice-in-borderland-003-19.jpg','https://i.postimg.cc/NMp8SRb1/alice-in-borderland-003-20.jpg','https://i.postimg.cc/mkk3sh6K/alice-in-borderland-003-21.jpg','https://i.postimg.cc/9XgtBtD2/alice-in-borderland-003-22.jpg','https://i.postimg.cc/8cYRPD2c/alice-in-borderland-003-23.jpg','https://i.postimg.cc/657Vb2Zv/alice-in-borderland-003-24.jpg','https://i.postimg.cc/Fs2yMrbn/alice-in-borderland-003-25.jpg','https://i.postimg.cc/7Z03DFmP/alice-in-borderland-003-26.jpg','https://i.postimg.cc/d0F805x2/alice-in-borderland-003-27.jpg','https://i.postimg.cc/k5yWRW0k/alice-in-borderland-003-28.jpg','https://i.postimg.cc/FRs3y7m1/alice-in-borderland-003-29.jpg','https://i.postimg.cc/xCxHtnT5/alice-in-borderland-003-30.jpg','https://i.postimg.cc/Gt4DfV4C/alice-in-borderland-003-31.jpg','https://i.postimg.cc/HWNXMYNs/alice-in-borderland-003-32.jpg','https://i.postimg.cc/28Bv7ppd/alice-in-borderland-003-33.jpg','https://i.postimg.cc/fRndHHZG/alice-in-borderland-003-34.jpg','https://i.postimg.cc/Mp7Qgypv/alice-in-borderland-003-35.jpg','https://i.postimg.cc/zfqgNVyp/alice-in-borderland-003-36.jpg','https://i.postimg.cc/g0462mRp/alice-in-borderland-003-37.jpg','https://i.postimg.cc/Kzz3KwrM/alice-in-borderland-003-38.jpg','https://i.postimg.cc/Y9sGQRby/alice-in-borderland-003-39.jpg','https://i.postimg.cc/WzqD8Zyp/alice-in-borderland-003-40.jpg','https://i.postimg.cc/BtWjV6WT/alice-in-borderland-003-41.jpg','https://i.postimg.cc/J7sKv2V0/alice-in-borderland-003-42.jpg'],
                 order: 3,
             },{
                 title: '3 of clubs - part 2',
-                cover_photo: 'https://i.postimg.cc/B6XcWXzk/alice-in-borderland-004-01.jpg',
                 pages: ['https://i.postimg.cc/B6XcWXzk/alice-in-borderland-004-01.jpg','https://i.postimg.cc/JhTcdbpj/alice-in-borderland-004-02.jpg','https://i.postimg.cc/mk9YDKBS/alice-in-borderland-004-03.jpg','https://i.postimg.cc/Ss3LmmFs/alice-in-borderland-004-04.jpg','https://i.postimg.cc/RVr18CLp/alice-in-borderland-004-05.jpg','https://i.postimg.cc/SQY7DYCz/alice-in-borderland-004-06.jpg','https://i.postimg.cc/3JgjHML8/alice-in-borderland-004-07.jpg','https://i.postimg.cc/y8sm1f5F/alice-in-borderland-004-08.png','https://i.postimg.cc/vZhWcrFC/alice-in-borderland-004-09.png','https://i.postimg.cc/VNNXMJzv/alice-in-borderland-004-10.png','https://i.postimg.cc/pd1zBPdZ/alice-in-borderland-004-11.png','https://i.postimg.cc/tTZPS8ZH/alice-in-borderland-004-12.png','https://i.postimg.cc/4dDcrwVH/alice-in-borderland-004-13.png','https://i.postimg.cc/DfGLqk3r/alice-in-borderland-004-14.png','https://i.postimg.cc/T1nbGmJ7/alice-in-borderland-004-15.jpg','https://i.postimg.cc/28fvGcCP/alice-in-borderland-004-16.jpg','https://i.postimg.cc/dtmCx21D/alice-in-borderland-004-17.jpg','https://i.postimg.cc/rwV4XD0j/alice-in-borderland-004-18.jpg','https://i.postimg.cc/SxgMymch/alice-in-borderland-004-19.jpg','https://i.postimg.cc/k5DtGLyt/alice-in-borderland-004-20.jpg','https://i.postimg.cc/9fSw71xg/alice-in-borderland-004-21.jpg','https://i.postimg.cc/gJZXqRQz/alice-in-borderland-004-22.jpg','https://i.postimg.cc/Rhx3Phxc/alice-in-borderland-004-23.jpg','https://i.postimg.cc/6qV8FKBF/alice-in-borderland-004-24.jpg','https://i.postimg.cc/jqynDHyv/alice-in-borderland-004-25.jpg','https://i.postimg.cc/dtvkrhBF/alice-in-borderland-004-26.jpg','https://i.postimg.cc/3JByB3Sv/alice-in-borderland-004-27.jpg','https://i.postimg.cc/jSSD3Bmk/alice-in-borderland-004-28.jpg','https://i.postimg.cc/XY1pRQ0N/alice-in-borderland-004-29.jpg','https://i.postimg.cc/SKXJkCy6/alice-in-borderland-004-30.jpg','https://i.postimg.cc/3wPWRNRP/alice-in-borderland-004-31.jpg','https://i.postimg.cc/KzBjgb34/alice-in-borderland-004-32.jpg','https://i.postimg.cc/gjK0NKDW/alice-in-borderland-004-33.jpg','https://i.postimg.cc/j2T5H1yc/alice-in-borderland-004-34.jpg','https://i.postimg.cc/9XPzmWjn/alice-in-borderland-004-35.jpg','https://i.postimg.cc/Fs9z12rs/alice-in-borderland-004-36.jpg','https://i.postimg.cc/WbX3ZXzm/alice-in-borderland-004-37.jpg'],
                 order: 4,
             },{
                 title: 'visa',
-                cover_photo: 'https://i.postimg.cc/DZrfwcRX/alice-in-borderland-005-01.jpg',
                 pages: ['https://i.postimg.cc/DZrfwcRX/alice-in-borderland-005-01.jpg','https://i.postimg.cc/0QR2v4Xv/alice-in-borderland-005-02.jpg','https://i.postimg.cc/3N384vHb/alice-in-borderland-005-03.jpg','https://i.postimg.cc/gj4Yv2zc/alice-in-borderland-005-04.jpg','https://i.postimg.cc/jqhdVZHV/alice-in-borderland-005-05.jpg','https://i.postimg.cc/288jChG1/alice-in-borderland-005-06.jpg','https://i.postimg.cc/BQYSbb7M/alice-in-borderland-005-07.jpg','https://i.postimg.cc/HkrpymfH/alice-in-borderland-005-08.jpg','https://i.postimg.cc/TPmft9d4/alice-in-borderland-005-09.jpg','https://i.postimg.cc/50V1TCjN/alice-in-borderland-005-10.jpg','https://i.postimg.cc/50S1V2F5/alice-in-borderland-005-11.jpg','https://i.postimg.cc/Y027qB15/alice-in-borderland-005-12.jpg','https://i.postimg.cc/L5ypJQDn/alice-in-borderland-005-13.jpg','https://i.postimg.cc/Df5Fpmhn/alice-in-borderland-005-14.jpg','https://i.postimg.cc/15tSkPR6/alice-in-borderland-005-15.jpg','https://i.postimg.cc/CLQ0Ytd2/alice-in-borderland-005-16.jpg','https://i.postimg.cc/dVZY0ByV/alice-in-borderland-005-17.jpg','https://i.postimg.cc/5tcMQCBq/alice-in-borderland-005-18.jpg','https://i.postimg.cc/cHhqzkVX/alice-in-borderland-005-19.jpg','https://i.postimg.cc/q78HsvQf/alice-in-borderland-005-20.jpg','https://i.postimg.cc/pTRbqM1m/alice-in-borderland-005-21.jpg','https://i.postimg.cc/zvfmYSN5/alice-in-borderland-005-22.jpg'],
                 order: 5,
             },{
                 title: 'second day',
-                cover_photo: 'https://i.postimg.cc/j2f1b81p/alice-in-borderland-006-01.jpg',
                 pages: ['https://i.postimg.cc/j2f1b81p/alice-in-borderland-006-01.jpg','https://i.postimg.cc/Hkdhq99N/alice-in-borderland-006-02.jpg','https://i.postimg.cc/KzRV9cDv/alice-in-borderland-006-03.jpg','https://i.postimg.cc/kXrZcm6q/alice-in-borderland-006-04.jpg','https://i.postimg.cc/Ss3PH0gL/alice-in-borderland-006-05.jpg','https://i.postimg.cc/SNWP1vC8/alice-in-borderland-006-06.jpg','https://i.postimg.cc/T25FgwPt/alice-in-borderland-006-07.jpg','https://i.postimg.cc/XYLz4B2Y/alice-in-borderland-006-08.jpg','https://i.postimg.cc/d00S1QXm/alice-in-borderland-006-09.jpg','https://i.postimg.cc/SKt1zFb0/alice-in-borderland-006-10.jpg','https://i.postimg.cc/xCJxvx9X/alice-in-borderland-006-11.jpg','https://i.postimg.cc/8PVKvm9C/alice-in-borderland-006-12.jpg','https://i.postimg.cc/v8n2DNPj/alice-in-borderland-006-13.jpg','https://i.postimg.cc/hjkCpLGp/alice-in-borderland-006-14.jpg','https://i.postimg.cc/j2yM9DwK/alice-in-borderland-006-15.jpg','https://i.postimg.cc/qMXmxCHx/alice-in-borderland-006-16.jpg','https://i.postimg.cc/T3dt7YRM/alice-in-borderland-006-17.jpg','https://i.postimg.cc/NjdpWqMy/alice-in-borderland-006-18.jpg','https://i.postimg.cc/Zq0Vm7Bw/alice-in-borderland-006-19.jpg','https://i.postimg.cc/6QSzprCt/alice-in-borderland-006-20.jpg','https://i.postimg.cc/PxwypCMZ/alice-in-borderland-006-21.jpg','https://i.postimg.cc/RhxRcvPY/alice-in-borderland-006-22.jpg','https://i.postimg.cc/dQGnJT3c/alice-in-borderland-006-23.jpg','https://i.postimg.cc/6qVhcFgp/alice-in-borderland-006-24.jpg','https://i.postimg.cc/wTH2MTRy/alice-in-borderland-006-25.jpg','https://i.postimg.cc/dtBByPGW/alice-in-borderland-006-26.jpg','https://i.postimg.cc/wjjk5fV9/alice-in-borderland-006-27.jpg','https://i.postimg.cc/nhSG34RB/alice-in-borderland-006-28.jpg','https://i.postimg.cc/zfLS6y6M/alice-in-borderland-006-29.jpg','https://i.postimg.cc/bvKHhzjv/alice-in-borderland-006-30.jpg','https://i.postimg.cc/RFK1CjML/alice-in-borderland-006-31.jpg','https://i.postimg.cc/hvnLXpvW/alice-in-borderland-006-32.jpg','https://i.postimg.cc/3rjjs5fK/alice-in-borderland-006-33.jpg','https://i.postimg.cc/pX2QxG3K/alice-in-borderland-006-34.jpg','https://i.postimg.cc/Yqb6SNwZ/alice-in-borderland-006-35.jpg'],
                 order: 6,
             },{
                 title: '5 of spades - part 1',
-                cover_photo: 'https://i.postimg.cc/L8J16rDg/alice-in-borderland-007-01.jpg',
                 pages: ['https://i.postimg.cc/L8J16rDg/alice-in-borderland-007-01.jpg','https://i.postimg.cc/0yhJ6cXW/alice-in-borderland-007-02.jpg','https://i.postimg.cc/LsfgjLrH/alice-in-borderland-007-03.jpg','https://i.postimg.cc/Qt39mV3c/alice-in-borderland-007-04.jpg','https://i.postimg.cc/k4vVp9Jz/alice-in-borderland-007-05.jpg','https://i.postimg.cc/nrdXnkQ1/alice-in-borderland-007-06.jpg','https://i.postimg.cc/prV9N7yT/alice-in-borderland-007-07.jpg','https://i.postimg.cc/2jTbdzXB/alice-in-borderland-007-08.jpg','https://i.postimg.cc/MKTcdhh3/alice-in-borderland-007-09.jpg','https://i.postimg.cc/Hk8rCbWQ/alice-in-borderland-007-10.jpg','https://i.postimg.cc/CKyzMdd9/alice-in-borderland-007-11.jpg','https://i.postimg.cc/SKWjnqMR/alice-in-borderland-007-12.jpg','https://i.postimg.cc/C1S5DtGN/alice-in-borderland-007-13.jpg','https://i.postimg.cc/3R1RZB9H/alice-in-borderland-007-14.jpg','https://i.postimg.cc/prddcF15/alice-in-borderland-007-15.jpg','https://i.postimg.cc/C56x3xWP/alice-in-borderland-007-16.jpg','https://i.postimg.cc/fWHyt8Jc/alice-in-borderland-007-17.jpg','https://i.postimg.cc/Nf5M1RHW/alice-in-borderland-007-18.jpg','https://i.postimg.cc/Pr9qKNbN/alice-in-borderland-007-19.jpg','https://i.postimg.cc/9Q9QkV1b/alice-in-borderland-007-20.jpg','https://i.postimg.cc/R0zZ58DB/alice-in-borderland-007-21.jpg','https://i.postimg.cc/ydL1RNY1/alice-in-borderland-007-22.jpg','https://i.postimg.cc/652W7tsK/alice-in-borderland-007-23.jpg','https://i.postimg.cc/Rh3BnQDd/alice-in-borderland-007-24.jpg','https://i.postimg.cc/VN1mHtJs/alice-in-borderland-007-25.jpg','https://i.postimg.cc/RFZ9vz1j/alice-in-borderland-007-26.jpg','https://i.postimg.cc/fLqsLgBk/alice-in-borderland-007-27.jpg','https://i.postimg.cc/3NPHj0MT/alice-in-borderland-007-28.jpg','https://i.postimg.cc/sf8yCqMN/alice-in-borderland-007-29.jpg','https://i.postimg.cc/DyXhv6sy/alice-in-borderland-007-30.jpg'],
                 order: 7,
             },{
                 title: '5 of spades - part 2',
-                cover_photo: 'https://i.postimg.cc/DwQKszB9/alice-in-borderland-008-01.jpg',
                 pages: ['https://i.postimg.cc/DwQKszB9/alice-in-borderland-008-01.jpg','https://i.postimg.cc/wB6Ykdr7/alice-in-borderland-008-02.jpg','https://i.postimg.cc/vm3FqNRX/alice-in-borderland-008-03.jpg','https://i.postimg.cc/XJPM3BYC/alice-in-borderland-008-04.jpg','https://i.postimg.cc/d3Zb0QhS/alice-in-borderland-008-05.jpg','https://i.postimg.cc/4nCrHCt4/alice-in-borderland-008-06.jpg','https://i.postimg.cc/gcwjhvR1/alice-in-borderland-008-07.jpg','https://i.postimg.cc/sXxFt4sz/alice-in-borderland-008-08.jpg','https://i.postimg.cc/J79n5G50/alice-in-borderland-008-09.jpg','https://i.postimg.cc/Nfm0JBd4/alice-in-borderland-008-10.jpg','https://i.postimg.cc/1z5536sC/alice-in-borderland-008-11.jpg','https://i.postimg.cc/HLZWcxLp/alice-in-borderland-008-12.jpg','https://i.postimg.cc/vBCQhN9k/alice-in-borderland-008-13.jpg','https://i.postimg.cc/MZjZHzJS/alice-in-borderland-008-14.jpg','https://i.postimg.cc/nr7nPGGz/alice-in-borderland-008-15.jpg','https://i.postimg.cc/TYMdWBTW/alice-in-borderland-008-16.jpg','https://i.postimg.cc/dVnwp1r8/alice-in-borderland-008-17.jpg','https://i.postimg.cc/ZqR4SSxX/alice-in-borderland-008-18.jpg','https://i.postimg.cc/D0VTLb3K/alice-in-borderland-008-19.jpg','https://i.postimg.cc/MGFxZFsH/alice-in-borderland-008-20.jpg','https://i.postimg.cc/Y01w3qtL/alice-in-borderland-008-21.jpg','https://i.postimg.cc/9XTVV1yX/alice-in-borderland-008-22.jpg','https://i.postimg.cc/5NSVQ0PZ/alice-in-borderland-008-23.jpg','https://i.postimg.cc/Jz7WNLvt/alice-in-borderland-008-24.jpg','https://i.postimg.cc/HLVDNtpg/alice-in-borderland-008-25.jpg','https://i.postimg.cc/3xLQ9qQ1/alice-in-borderland-008-26.jpg'],
                 order: 8,
             },{
                 title: '5 of spades - part 3',
-                cover_photo: 'https://i.postimg.cc/bwV4121F/alice-in-borderland-009-01.jpg',
                 pages: ['https://i.postimg.cc/bwV4121F/alice-in-borderland-009-01.jpg','https://i.postimg.cc/yYPMYGxK/alice-in-borderland-009-02.jpg','https://i.postimg.cc/DwwtWc4X/alice-in-borderland-009-03.jpg','https://i.postimg.cc/FKf8psZF/alice-in-borderland-009-04.jpg','https://i.postimg.cc/prvSPQty/alice-in-borderland-009-05.jpg','https://i.postimg.cc/N0WVzqJ6/alice-in-borderland-009-06.jpg','https://i.postimg.cc/k4KZr1zk/alice-in-borderland-009-07.jpg','https://i.postimg.cc/Wz7HzD28/alice-in-borderland-009-08.jpg','https://i.postimg.cc/nLQS7SFC/alice-in-borderland-009-09.jpg','https://i.postimg.cc/ZRt7LPnj/alice-in-borderland-009-10.jpg','https://i.postimg.cc/prPsw2DF/alice-in-borderland-009-11.jpg','https://i.postimg.cc/kGwT9kch/alice-in-borderland-009-12.jpg','https://i.postimg.cc/wxkfhmpc/alice-in-borderland-009-13.jpg','https://i.postimg.cc/HssS3kWG/alice-in-borderland-009-14.jpg','https://i.postimg.cc/kX1THPD2/alice-in-borderland-009-15.jpg','https://i.postimg.cc/T3KtMNWC/alice-in-borderland-009-16.jpg','https://i.postimg.cc/50VgzxKR/alice-in-borderland-009-17.jpg','https://i.postimg.cc/bJ9THKKN/alice-in-borderland-009-18.jpg','https://i.postimg.cc/SRQGZghL/alice-in-borderland-009-19.jpg','https://i.postimg.cc/PJ6Q01Xg/alice-in-borderland-009-20.jpg','https://i.postimg.cc/mZVjcWYm/alice-in-borderland-009-21.jpg','https://i.postimg.cc/8P5HMXwN/alice-in-borderland-009-22.jpg','https://i.postimg.cc/J42Qq3dJ/alice-in-borderland-009-23.jpg','https://i.postimg.cc/nh9Gws6W/alice-in-borderland-009-24.jpg','https://i.postimg.cc/YSczcr7C/alice-in-borderland-009-25.jpg','https://i.postimg.cc/Bvxc4rZc/alice-in-borderland-009-26.jpg','https://i.postimg.cc/bJp0JmsX/alice-in-borderland-009-27.jpg','https://i.postimg.cc/hvG98hLp/alice-in-borderland-009-28.jpg','https://i.postimg.cc/Rhbwg9G9/alice-in-borderland-009-29.jpg','https://i.postimg.cc/7PB1HM4c/alice-in-borderland-009-30.jpg'],
                 order: 9,
             },{
                 title: '5 of spades - part 4',
-                cover_photo: 'https://i.postimg.cc/zBGL66yf/alice-in-borderland-010-01.jpg',
                 pages: ['https://i.postimg.cc/zBGL66yf/alice-in-borderland-010-01.jpg','https://i.postimg.cc/KzpK2fTD/alice-in-borderland-010-02.jpg','https://i.postimg.cc/qq9zt7jt/alice-in-borderland-010-03.jpg','https://i.postimg.cc/BQKjrxn2/alice-in-borderland-010-04.jpg','https://i.postimg.cc/fR7JLDXL/alice-in-borderland-010-05.jpg','https://i.postimg.cc/mkcP29Nf/alice-in-borderland-010-06.jpg','https://i.postimg.cc/XY6r4prm/alice-in-borderland-010-07.jpg','https://i.postimg.cc/h4wJZCcS/alice-in-borderland-010-08.jpg','https://i.postimg.cc/k5nDRzFy/alice-in-borderland-010-09.jpg','https://i.postimg.cc/252yQG0N/alice-in-borderland-010-10.jpg','https://i.postimg.cc/ydGN5dqf/alice-in-borderland-010-11.jpg','https://i.postimg.cc/jdPzHVPV/alice-in-borderland-010-12.jpg','https://i.postimg.cc/ZnyqhS4J/alice-in-borderland-010-13.jpg','https://i.postimg.cc/g2K87vgN/alice-in-borderland-010-14.jpg','https://i.postimg.cc/v8prx81L/alice-in-borderland-010-15.jpg','https://i.postimg.cc/J7y3hHhz/alice-in-borderland-010-16.jpg','https://i.postimg.cc/GmRvzMx4/alice-in-borderland-010-17.jpg','https://i.postimg.cc/43NVRmMZ/alice-in-borderland-010-18.jpg','https://i.postimg.cc/VNGMfzQt/alice-in-borderland-010-19.jpg','https://i.postimg.cc/ZRWN0X4M/alice-in-borderland-010-20.jpg','https://i.postimg.cc/FRwLSGKs/alice-in-borderland-010-21.jpg','https://i.postimg.cc/fyX0fX37/alice-in-borderland-010-22.jpg','https://i.postimg.cc/sfZSzFnB/alice-in-borderland-010-23.jpg','https://i.postimg.cc/GhwDhMNX/alice-in-borderland-010-24.jpg','https://i.postimg.cc/7Y32C3rw/alice-in-borderland-010-25.jpg','https://i.postimg.cc/qvpC2Npn/alice-in-borderland-010-26.jpg','https://i.postimg.cc/Hk38zTLN/alice-in-borderland-010-27.jpg','https://i.postimg.cc/HLxcPFck/alice-in-borderland-010-28.jpg','https://i.postimg.cc/R0D6rGKQ/alice-in-borderland-010-29.jpg'],
                 order: 10,
             },{
                 title: 'Third day',
-                cover_photo: 'https://i.postimg.cc/GtJmpj8f/alice-in-borderland-011-01.jpg',
                 pages: ['https://i.postimg.cc/GtJmpj8f/alice-in-borderland-011-01.jpg','https://i.postimg.cc/CMj1JwP4/alice-in-borderland-011-02.jpg','https://i.postimg.cc/Z5DK0nnJ/alice-in-borderland-011-03.jpg','https://i.postimg.cc/XvGN5WBd/alice-in-borderland-011-04.jpg','https://i.postimg.cc/yd0VfTPN/alice-in-borderland-011-05.jpg','https://i.postimg.cc/2ywCY8gR/alice-in-borderland-011-06.jpg','https://i.postimg.cc/PqgXz71c/alice-in-borderland-011-07.jpg','https://i.postimg.cc/ZKbTcpyT/alice-in-borderland-011-08.jpg','https://i.postimg.cc/15vyYXpD/alice-in-borderland-011-09.jpg','https://i.postimg.cc/0NwxQChC/alice-in-borderland-011-10.jpg','https://i.postimg.cc/V6PwbC8P/alice-in-borderland-011-11.jpg','https://i.postimg.cc/Qtg3gd89/alice-in-borderland-011-12.jpg','https://i.postimg.cc/PJtkSnJ6/alice-in-borderland-011-13.jpg','https://i.postimg.cc/kGfPZYt7/alice-in-borderland-011-14.jpg','https://i.postimg.cc/bYTPsrV4/alice-in-borderland-011-15.jpg','https://i.postimg.cc/Hskg5mfn/alice-in-borderland-011-16.jpg','https://i.postimg.cc/sgBC6cfR/alice-in-borderland-011-17.jpg','https://i.postimg.cc/0yLRLwrK/alice-in-borderland-011-18.jpg','https://i.postimg.cc/VNnQ1kbG/alice-in-borderland-011-19.jpg','https://i.postimg.cc/rmT6p218/alice-in-borderland-011-20.jpg','https://i.postimg.cc/PxQgpVy1/alice-in-borderland-011-21.jpg','https://i.postimg.cc/d3Wgn7z1/alice-in-borderland-011-22.jpg','https://i.postimg.cc/5N0hy3CF/alice-in-borderland-011-23.jpg','https://i.postimg.cc/Gh5ZyyFg/alice-in-borderland-011-24.jpg','https://i.postimg.cc/RZJ2QZGS/alice-in-borderland-011-25.jpg','https://i.postimg.cc/1zx2W1Yp/alice-in-borderland-011-26.jpg','https://i.postimg.cc/9fGSKgvs/alice-in-borderland-011-27.jpg','https://i.postimg.cc/FRNq4gvz/alice-in-borderland-011-28.jpg','https://i.postimg.cc/mDjn2zZw/alice-in-borderland-011-29.jpg','https://i.postimg.cc/cCJbKxrN/alice-in-borderland-011-30.jpg','https://i.postimg.cc/0jHHDTwK/alice-in-borderland-011-31.jpg','https://i.postimg.cc/qBmFP35B/alice-in-borderland-011-32.jpg','https://i.postimg.cc/xTcZn1wv/alice-in-borderland-011-33.jpg'],
                 order: 11,
             }
@@ -75,52 +65,43 @@ let mangas = [
         title: 'Shingeki no Kyojin',
         cover_photo: 'https://i.postimg.cc/Nj4bXyr2/main-shingeki-no-kyojin.png',
         description: '100 years ago Titans appeared on earth. Soon the civilization was at the point of collapse because of these, the humans then built three giant walls to defend themselves. With the walls they were at peace but, after 100 years, the giants broke down the walls.',
-        category_id: 'shonen',
-        author_id: 'lucas',
+        category_id: 'Shonen',
+        company_id: 'Creative Minds',
         chapters: [
             {
                 title: 'Titans attack',
-                cover_photo: '',
                 pages: ['https://i.postimg.cc/cH1pYyH0/shingeki-no-kyojin-001-01.png','https://i.postimg.cc/BbXRYTHz/shingeki-no-kyojin-001-02.png','https://i.postimg.cc/Nf2WRxg9/shingeki-no-kyojin-001-03.png','https://i.postimg.cc/GtVVZ4jm/shingeki-no-kyojin-001-04.png','https://i.postimg.cc/L4bcqWMF/shingeki-no-kyojin-001-05.png','https://i.postimg.cc/cLqPh8HD/shingeki-no-kyojin-001-06.png','https://i.postimg.cc/fRxprTSM/shingeki-no-kyojin-001-07.png','https://i.postimg.cc/26HP7cbv/shingeki-no-kyojin-001-08.png','https://i.postimg.cc/fbDpnnYm/shingeki-no-kyojin-001-09.png','https://i.postimg.cc/VNgTzGFT/shingeki-no-kyojin-001-10.png','https://i.postimg.cc/fLbPyc2b/shingeki-no-kyojin-001-11.png','https://i.postimg.cc/C16QqRXs/shingeki-no-kyojin-001-12.png','https://i.postimg.cc/xjB0r88m/shingeki-no-kyojin-001-13.png','https://i.postimg.cc/nrjwYHtb/shingeki-no-kyojin-001-14.png','https://i.postimg.cc/XqR1sTVZ/shingeki-no-kyojin-001-15.png','https://i.postimg.cc/fWVwgmzZ/shingeki-no-kyojin-001-16.png','https://i.postimg.cc/tCP99bnM/shingeki-no-kyojin-001-17.png','https://i.postimg.cc/kgmq4HxX/shingeki-no-kyojin-001-18.png','https://i.postimg.cc/XYk3yg8K/shingeki-no-kyojin-001-19.png','https://i.postimg.cc/9fX2Pq86/shingeki-no-kyojin-001-20.png','https://i.postimg.cc/1zWQv5bf/shingeki-no-kyojin-001-21.png','https://i.postimg.cc/506MTWMp/shingeki-no-kyojin-001-22.png','https://i.postimg.cc/FR8QQCrv/shingeki-no-kyojin-001-23.png','https://i.postimg.cc/kGSPMNGb/shingeki-no-kyojin-001-24.png','https://i.postimg.cc/8P8VKYXB/shingeki-no-kyojin-001-25.png','https://i.postimg.cc/05KsCvny/shingeki-no-kyojin-001-26.png','https://i.postimg.cc/WbMcQ7QR/shingeki-no-kyojin-001-27.png','https://i.postimg.cc/VkmP1C8J/shingeki-no-kyojin-001-28.png','https://i.postimg.cc/FHp5KHrD/shingeki-no-kyojin-001-29.png','https://i.postimg.cc/fbb4SQkZ/shingeki-no-kyojin-001-30.png','https://i.postimg.cc/yNpMFpSR/shingeki-no-kyojin-001-31.png','https://i.postimg.cc/d17znR8x/shingeki-no-kyojin-001-32.png','https://i.postimg.cc/NMWZnyDf/shingeki-no-kyojin-001-33.png','https://i.postimg.cc/Y0YTBpDN/shingeki-no-kyojin-001-34.png','https://i.postimg.cc/bYt7tTYG/shingeki-no-kyojin-001-35.png','https://i.postimg.cc/VLP3BC5K/shingeki-no-kyojin-001-36.png','https://i.postimg.cc/J43STzkM/shingeki-no-kyojin-001-37.png','https://i.postimg.cc/nhHgNf47/shingeki-no-kyojin-001-38.png','https://i.postimg.cc/0Nj32GHy/shingeki-no-kyojin-001-39.png','https://i.postimg.cc/hGYYJJHb/shingeki-no-kyojin-001-40.png','https://i.postimg.cc/sXZN5jzF/shingeki-no-kyojin-001-41.png','https://i.postimg.cc/x8DFRwjX/shingeki-no-kyojin-001-42.png','https://i.postimg.cc/KjPps04J/shingeki-no-kyojin-001-43.png','https://i.postimg.cc/y6cGd8nc/shingeki-no-kyojin-001-44.png','https://i.postimg.cc/vHyN6wSj/shingeki-no-kyojin-001-45.png','https://i.postimg.cc/KcfnJX8C/shingeki-no-kyojin-001-46.png','https://i.postimg.cc/Z5KsVFmx/shingeki-no-kyojin-001-47.png','https://i.postimg.cc/sg668QDd/shingeki-no-kyojin-001-48.png','https://i.postimg.cc/vm4qdYc1/shingeki-no-kyojin-001-49.png'],
                 order: 1,
             },{
                 title: 'That day',
-                cover_photo: '',
                 pages: ['https://i.postimg.cc/9FzqbrSq/shingeki-no-kyojin-002-01.png','https://i.postimg.cc/DZ2SXZL0/shingeki-no-kyojin-002-02.png','https://i.postimg.cc/GhNT5bwg/shingeki-no-kyojin-002-03.png','https://i.postimg.cc/0jjrVBtq/shingeki-no-kyojin-002-04.png','https://i.postimg.cc/pdQ9r893/shingeki-no-kyojin-002-05.png','https://i.postimg.cc/R0x6vG0c/shingeki-no-kyojin-002-06.png','https://i.postimg.cc/XJQpcbk8/shingeki-no-kyojin-002-07.png','https://i.postimg.cc/bwtSX4qy/shingeki-no-kyojin-002-08.png','https://i.postimg.cc/rsHs3NbR/shingeki-no-kyojin-002-09.png','https://i.postimg.cc/c1kvvdH1/shingeki-no-kyojin-002-10.png','https://i.postimg.cc/Yq4hgTG6/shingeki-no-kyojin-002-11.png','https://i.postimg.cc/J49tQKZ9/shingeki-no-kyojin-002-12.png','https://i.postimg.cc/rwxsZW9z/shingeki-no-kyojin-002-13.png','https://i.postimg.cc/W4V3B398/shingeki-no-kyojin-002-14.png','https://i.postimg.cc/TPcwf6F6/shingeki-no-kyojin-002-15.png','https://i.postimg.cc/TwYPPsvW/shingeki-no-kyojin-002-16.png','https://i.postimg.cc/fL2RSvMq/shingeki-no-kyojin-002-17.png','https://i.postimg.cc/WzdbGJ3N/shingeki-no-kyojin-002-18.png','https://i.postimg.cc/T1B2CYLr/shingeki-no-kyojin-002-19.png','https://i.postimg.cc/nVWLHTRC/shingeki-no-kyojin-002-20.png','https://i.postimg.cc/X7yYXFmx/shingeki-no-kyojin-002-21.png','https://i.postimg.cc/Mp2KBH8w/shingeki-no-kyojin-002-22.png','https://i.postimg.cc/XYfNkWVC/shingeki-no-kyojin-002-23.png','https://i.postimg.cc/MGz6sLTr/shingeki-no-kyojin-002-24.png','https://i.postimg.cc/rpg879Ry/shingeki-no-kyojin-002-25.png','https://i.postimg.cc/Y99p7mQ6/shingeki-no-kyojin-002-26.png','https://i.postimg.cc/NMzQjfxW/shingeki-no-kyojin-002-27.png','https://i.postimg.cc/8cfNJQKs/shingeki-no-kyojin-002-28.png','https://i.postimg.cc/vDRM5qkh/shingeki-no-kyojin-002-29.png','https://i.postimg.cc/NGKH7KZ2/shingeki-no-kyojin-002-30.png','https://i.postimg.cc/ZYXyfTh7/shingeki-no-kyojin-002-31.png','https://i.postimg.cc/fRNSNByY/shingeki-no-kyojin-002-32.png','https://i.postimg.cc/fTXSp6zw/shingeki-no-kyojin-002-33.png','https://i.postimg.cc/6Q677qd3/shingeki-no-kyojin-002-34.png','https://i.postimg.cc/cLBg4wt2/shingeki-no-kyojin-002-35.png','https://i.postimg.cc/VN7JXwRF/shingeki-no-kyojin-002-36.png','https://i.postimg.cc/ydkkPGpC/shingeki-no-kyojin-002-37.png','https://i.postimg.cc/0QFrHChM/shingeki-no-kyojin-002-38.png','https://i.postimg.cc/FFkYk2Jj/shingeki-no-kyojin-002-39.png','https://i.postimg.cc/MKkv7dyg/shingeki-no-kyojin-002-40.png'],
                 order: 2,
             },{
                 title: 'Discharge night',
-                cover_photo: '',
                 pages: ['https://i.postimg.cc/MTV8qbvj/shingeki-no-kyojin-003-01.png','https://i.postimg.cc/6pbK0pkT/shingeki-no-kyojin-003-02.png','https://i.postimg.cc/cJVNp54S/shingeki-no-kyojin-003-03.png','https://i.postimg.cc/httgTd3H/shingeki-no-kyojin-003-04.png','https://i.postimg.cc/xjL02YzF/shingeki-no-kyojin-003-05.png','https://i.postimg.cc/bNTpZTLx/shingeki-no-kyojin-003-06.png','https://i.postimg.cc/RV9vC81C/shingeki-no-kyojin-003-07.png','https://i.postimg.cc/5tHVkMJg/shingeki-no-kyojin-003-08.png','https://i.postimg.cc/brPfJDtV/shingeki-no-kyojin-003-09.png','https://i.postimg.cc/vTvF6Y7Y/shingeki-no-kyojin-003-10.png','https://i.postimg.cc/zDw1Qjss/shingeki-no-kyojin-003-11.png','https://i.postimg.cc/rF8L24cK/shingeki-no-kyojin-003-12.png','https://i.postimg.cc/g279hBhZ/shingeki-no-kyojin-003-13.png','https://i.postimg.cc/DyB3vzy5/shingeki-no-kyojin-003-14.png','https://i.postimg.cc/bvS79H0F/shingeki-no-kyojin-003-15.png','https://i.postimg.cc/nhrbCtXx/shingeki-no-kyojin-003-16.png','https://i.postimg.cc/4dCrL7B4/shingeki-no-kyojin-003-17.png','https://i.postimg.cc/85hxqp0R/shingeki-no-kyojin-003-18.png','https://i.postimg.cc/2yrgYssP/shingeki-no-kyojin-003-19.png','https://i.postimg.cc/d36pVWvD/shingeki-no-kyojin-003-20.png','https://i.postimg.cc/QNJRmM5s/shingeki-no-kyojin-003-21.png','https://i.postimg.cc/9FXsnjt9/shingeki-no-kyojin-003-22.png','https://i.postimg.cc/28HgpX2K/shingeki-no-kyojin-003-23.png','https://i.postimg.cc/y8kt7XGY/shingeki-no-kyojin-003-24.png','https://i.postimg.cc/FH8qzktb/shingeki-no-kyojin-003-25.png','https://i.postimg.cc/3wGqvr7s/shingeki-no-kyojin-003-26.png','https://i.postimg.cc/k4dpFrgB/shingeki-no-kyojin-003-27.png','https://i.postimg.cc/TwqHtkKQ/shingeki-no-kyojin-003-28.png','https://i.postimg.cc/HnYvRQ5m/shingeki-no-kyojin-003-29.png','https://i.postimg.cc/0jVXsbdw/shingeki-no-kyojin-003-30.png','https://i.postimg.cc/h4s5x5Wt/shingeki-no-kyojin-003-31.png','https://i.postimg.cc/65Q1hftL/shingeki-no-kyojin-003-32.png','https://i.postimg.cc/9QR86X4D/shingeki-no-kyojin-003-33.png','https://i.postimg.cc/rFYZZRp6/shingeki-no-kyojin-003-34.png','https://i.postimg.cc/bv16v698/shingeki-no-kyojin-003-35.png','https://i.postimg.cc/RZks4rfX/shingeki-no-kyojin-003-36.png','https://i.postimg.cc/vBM0xW0n/shingeki-no-kyojin-003-37.png','https://i.postimg.cc/C1NmGz2Q/shingeki-no-kyojin-003-38.png','https://i.postimg.cc/Kj8QJmSv/shingeki-no-kyojin-003-39.png','https://i.postimg.cc/mkpjnKB3/shingeki-no-kyojin-003-40.png','https://i.postimg.cc/QNffVK1B/shingeki-no-kyojin-003-41.png','https://i.postimg.cc/pXyqjVJs/shingeki-no-kyojin-003-42.png','https://i.postimg.cc/GmyKMMNY/shingeki-no-kyojin-003-43.png','https://i.postimg.cc/yY5nyqfs/shingeki-no-kyojin-003-44.png','https://i.postimg.cc/BvfgRT9z/shingeki-no-kyojin-003-45.png'],
                 order: 3,
             },{
                 title: 'First Battle',
-                cover_photo: '',
                 pages: ['https://i.postimg.cc/25YQ0CnR/shingeki-no-kyojin-004-01.png','https://i.postimg.cc/R0Tc82T3/shingeki-no-kyojin-004-02.png','https://i.postimg.cc/kGHNs8vf/shingeki-no-kyojin-004-03.png','https://i.postimg.cc/wTScsXvB/shingeki-no-kyojin-004-04.png','https://i.postimg.cc/2Shdd1b7/shingeki-no-kyojin-004-05.png','https://i.postimg.cc/RhhQwGKW/shingeki-no-kyojin-004-06.png','https://i.postimg.cc/WpY7sLcg/shingeki-no-kyojin-004-07.png','https://i.postimg.cc/kXVv417Z/shingeki-no-kyojin-004-08.png','https://i.postimg.cc/rmFSLghf/shingeki-no-kyojin-004-09.png','https://i.postimg.cc/ZR76Y324/shingeki-no-kyojin-004-10.png','https://i.postimg.cc/QCF1FCZ5/shingeki-no-kyojin-004-11.png','https://i.postimg.cc/t43PZ8wr/shingeki-no-kyojin-004-12.png','https://i.postimg.cc/8kYLqRLb/shingeki-no-kyojin-004-13.png','https://i.postimg.cc/jdJyKDXY/shingeki-no-kyojin-004-14.png','https://i.postimg.cc/nrN7BxnW/shingeki-no-kyojin-004-15.png','https://i.postimg.cc/0yRDN9WM/shingeki-no-kyojin-004-16.png','https://i.postimg.cc/GpbDkq1b/shingeki-no-kyojin-004-17.png','https://i.postimg.cc/GpzyzGcG/shingeki-no-kyojin-004-18.png','https://i.postimg.cc/xCCbZ8C7/shingeki-no-kyojin-004-19.png','https://i.postimg.cc/zBcRYNHf/shingeki-no-kyojin-004-20.png','https://i.postimg.cc/Sj02jGrF/shingeki-no-kyojin-004-21.png','https://i.postimg.cc/QCKKXzcJ/shingeki-no-kyojin-004-22.png','https://i.postimg.cc/qBWj8VD0/shingeki-no-kyojin-004-23.png','https://i.postimg.cc/nc7T2RNm/shingeki-no-kyojin-004-24.png','https://i.postimg.cc/L8pDbkMb/shingeki-no-kyojin-004-25.png','https://i.postimg.cc/ht1sWJDP/shingeki-no-kyojin-004-26.png','https://i.postimg.cc/jjqXss26/shingeki-no-kyojin-004-27.png','https://i.postimg.cc/4381yrHD/shingeki-no-kyojin-004-28.png','https://i.postimg.cc/sXv4hwpv/shingeki-no-kyojin-004-29.png','https://i.postimg.cc/nzgYYBkT/shingeki-no-kyojin-004-30.png','https://i.postimg.cc/fyd7Hyqs/shingeki-no-kyojin-004-31.png','https://i.postimg.cc/jqnhq3x1/shingeki-no-kyojin-004-32.png','https://i.postimg.cc/PrmzYL8z/shingeki-no-kyojin-004-33.png','https://i.postimg.cc/DwnQg2rV/shingeki-no-kyojin-004-34.png','https://i.postimg.cc/JzxNY9xs/shingeki-no-kyojin-004-35.png','https://i.postimg.cc/FKKjMDCD/shingeki-no-kyojin-004-36.png','https://i.postimg.cc/6Q1dtnDw/shingeki-no-kyojin-004-37.png','https://i.postimg.cc/G28v29CD/shingeki-no-kyojin-004-38.png','https://i.postimg.cc/JnfZBmr2/shingeki-no-kyojin-004-39.png','https://i.postimg.cc/wMDJXP3T/shingeki-no-kyojin-004-40.png','https://i.postimg.cc/3rGgQy95/shingeki-no-kyojin-004-41.png','https://i.postimg.cc/zX1TzJPL/shingeki-no-kyojin-004-42.png','https://i.postimg.cc/Wb6gtQQ5/shingeki-no-kyojin-004-43.png','https://i.postimg.cc/FHrcSTvN/shingeki-no-kyojin-004-44.png','https://i.postimg.cc/sgTW45fS/shingeki-no-kyojin-004-45.png','https://i.postimg.cc/XvXCHXXP/shingeki-no-kyojin-004-46.png','https://i.postimg.cc/Zqgy1Zd5/shingeki-no-kyojin-004-47.png'],
                 order: 4,
             },{
                 title: 'Dim light',
-                cover_photo: '',
                 pages: ['https://i.postimg.cc/yYvxMsqC/shingeki-no-kyojin-005-01.png','https://i.postimg.cc/1tw42FSv/shingeki-no-kyojin-005-02.png','https://i.postimg.cc/cJKv7jby/shingeki-no-kyojin-005-03.png','https://i.postimg.cc/137gqPMr/shingeki-no-kyojin-005-04.png','https://i.postimg.cc/nL6C3kys/shingeki-no-kyojin-005-05.png','https://i.postimg.cc/tC5n9Fxf/shingeki-no-kyojin-005-06.png','https://i.postimg.cc/nhhjrMKL/shingeki-no-kyojin-005-07.png','https://i.postimg.cc/65wGsMyn/shingeki-no-kyojin-005-08.png','https://i.postimg.cc/zvN3rfX8/shingeki-no-kyojin-005-09.png','https://i.postimg.cc/x8P8TScH/shingeki-no-kyojin-005-10.png','https://i.postimg.cc/qBczG2jR/shingeki-no-kyojin-005-11.png','https://i.postimg.cc/7YxbtbWN/shingeki-no-kyojin-005-12.png','https://i.postimg.cc/bwrr8W8D/shingeki-no-kyojin-005-13.png','https://i.postimg.cc/jS15jcd8/shingeki-no-kyojin-005-14.png','https://i.postimg.cc/KYgY3T1m/shingeki-no-kyojin-005-15.png','https://i.postimg.cc/768Z3Lz0/shingeki-no-kyojin-005-16.png','https://i.postimg.cc/bJxN3j0M/shingeki-no-kyojin-005-17.png','https://i.postimg.cc/C5wM26mK/shingeki-no-kyojin-005-18.png','https://i.postimg.cc/brLYfHB9/shingeki-no-kyojin-005-19.png','https://i.postimg.cc/8kbzvNzf/shingeki-no-kyojin-005-20.png','https://i.postimg.cc/c444M2v9/shingeki-no-kyojin-005-21.png','https://i.postimg.cc/WbWp98r2/shingeki-no-kyojin-005-22.png','https://i.postimg.cc/RZWS2tQw/shingeki-no-kyojin-005-23.png','https://i.postimg.cc/FHwrvKD8/shingeki-no-kyojin-005-24.png','https://i.postimg.cc/zfWJG1QB/shingeki-no-kyojin-005-25.png','https://i.postimg.cc/qRTpt5fG/shingeki-no-kyojin-005-26.png','https://i.postimg.cc/xC3nL3nV/shingeki-no-kyojin-005-27.png','https://i.postimg.cc/wMxH2Rjy/shingeki-no-kyojin-005-28.png','https://i.postimg.cc/T1kx42Kk/shingeki-no-kyojin-005-29.png','https://i.postimg.cc/7PXq69Kg/shingeki-no-kyojin-005-30.png','https://i.postimg.cc/Wb3TJZyx/shingeki-no-kyojin-005-31.png','https://i.postimg.cc/65mwV3Jq/shingeki-no-kyojin-005-32.png','https://i.postimg.cc/Dw4hxTng/shingeki-no-kyojin-005-33.png','https://i.postimg.cc/N0hcVz0w/shingeki-no-kyojin-005-34.png','https://i.postimg.cc/mrQsGyc1/shingeki-no-kyojin-005-35.png','https://i.postimg.cc/PxTkfvZ3/shingeki-no-kyojin-005-36.png','https://i.postimg.cc/Hxz1rW9p/shingeki-no-kyojin-005-37.png'],
                 order: 5,
             },{
                 title: 'In the past',
-                cover_photo: '',
                 pages: ['https://i.postimg.cc/BbwWChzk/shingeki-no-kyojin-006-01.png','https://i.postimg.cc/fbQG5SHz/shingeki-no-kyojin-006-02.png','https://i.postimg.cc/t460hNNv/shingeki-no-kyojin-006-03.png','https://i.postimg.cc/15f1zQnQ/shingeki-no-kyojin-006-04.png','https://i.postimg.cc/1z0LdRTp/shingeki-no-kyojin-006-05.png','https://i.postimg.cc/QtXRZGGv/shingeki-no-kyojin-006-06.png','https://i.postimg.cc/dtpPkxrT/shingeki-no-kyojin-006-07.png','https://i.postimg.cc/tRrHyTgk/shingeki-no-kyojin-006-08.png','https://i.postimg.cc/MTdgWPzH/shingeki-no-kyojin-006-10.png','https://i.postimg.cc/1XdTF8nZ/shingeki-no-kyojin-006-11.png','https://i.postimg.cc/HWvFRhSP/shingeki-no-kyojin-006-12.png','https://i.postimg.cc/7YCjkndP/shingeki-no-kyojin-006-13.png','https://i.postimg.cc/xTWhTbVv/shingeki-no-kyojin-006-14.png','https://i.postimg.cc/VknTSLz3/shingeki-no-kyojin-006-15.png','https://i.postimg.cc/6Qhm0j2c/shingeki-no-kyojin-006-16.png','https://i.postimg.cc/RFVbb7wB/shingeki-no-kyojin-006-17.png','https://i.postimg.cc/XvWP9SJX/shingeki-no-kyojin-006-18.png','https://i.postimg.cc/wvfbK1ks/shingeki-no-kyojin-006-19.png','https://i.postimg.cc/SRn1mmZ1/shingeki-no-kyojin-006-20.png','https://i.postimg.cc/qqWbRWSJ/shingeki-no-kyojin-006-21.png','https://i.postimg.cc/1RdYJNtk/shingeki-no-kyojin-006-22.png','https://i.postimg.cc/52B7473J/shingeki-no-kyojin-006-23.png','https://i.postimg.cc/Zqjw3W2D/shingeki-no-kyojin-006-24.png','https://i.postimg.cc/7LqBf3s2/shingeki-no-kyojin-006-25.png','https://i.postimg.cc/02JX32Kb/shingeki-no-kyojin-006-26.png','https://i.postimg.cc/zGZ21ZTp/shingeki-no-kyojin-006-27.png','https://i.postimg.cc/d1149qKQ/shingeki-no-kyojin-006-28.png','https://i.postimg.cc/76WXspx3/shingeki-no-kyojin-006-29.png','https://i.postimg.cc/Wzq8QX3Q/shingeki-no-kyojin-006-30.png','https://i.postimg.cc/fk4CZmSk/shingeki-no-kyojin-006-31.png','https://i.postimg.cc/3ryH8hDH/shingeki-no-kyojin-006-32.png','https://i.postimg.cc/15whFKHC/shingeki-no-kyojin-006-33.png','https://i.postimg.cc/Cx0ysfrF/shingeki-no-kyojin-006-34.png','https://i.postimg.cc/ryv2zHSR/shingeki-no-kyojin-006-35.png','https://i.postimg.cc/RZLksV2w/shingeki-no-kyojin-006-36.png','https://i.postimg.cc/BvZddfGk/shingeki-no-kyojin-006-9.png'],
                 order: 6,
             },{
                 title: 'Short blade',
-                cover_photo: '',
                 pages: ['https://i.postimg.cc/bJqnTPBF/shingeki-no-kyojin-007-01.png','https://i.postimg.cc/JzMgkCt0/shingeki-no-kyojin-007-02.png','https://i.postimg.cc/3wwctjXH/shingeki-no-kyojin-007-03.png','https://i.postimg.cc/65dgqpWF/shingeki-no-kyojin-007-04.png','https://i.postimg.cc/Cx72CrfN/shingeki-no-kyojin-007-05.png','https://i.postimg.cc/C58tjFjB/shingeki-no-kyojin-007-06.png','https://i.postimg.cc/3r0PMZP8/shingeki-no-kyojin-007-07.png','https://i.postimg.cc/gk91GZWv/shingeki-no-kyojin-007-08.png','https://i.postimg.cc/R0bby3dJ/shingeki-no-kyojin-007-09.png','https://i.postimg.cc/xCJF20px/shingeki-no-kyojin-007-10.png','https://i.postimg.cc/mDvpZ00b/shingeki-no-kyojin-007-11.png','https://i.postimg.cc/4ypLYWgp/shingeki-no-kyojin-007-12.png','https://i.postimg.cc/v8nS2ZVD/shingeki-no-kyojin-007-13.png','https://i.postimg.cc/3JHfsQX1/shingeki-no-kyojin-007-14.png','https://i.postimg.cc/dtmNvNnY/shingeki-no-kyojin-007-15.png','https://i.postimg.cc/BnSYv5w1/shingeki-no-kyojin-007-16.png','https://i.postimg.cc/DwxC4Wtp/shingeki-no-kyojin-007-17.png','https://i.postimg.cc/KY40PGbG/shingeki-no-kyojin-007-18.png','https://i.postimg.cc/zfM0psDn/shingeki-no-kyojin-007-19.png','https://i.postimg.cc/wvmFrw3n/shingeki-no-kyojin-007-20.png','https://i.postimg.cc/j2YvYy72/shingeki-no-kyojin-007-21.png','https://i.postimg.cc/br0gydxT/shingeki-no-kyojin-007-22.png','https://i.postimg.cc/QNc0kY2T/shingeki-no-kyojin-007-23.png','https://i.postimg.cc/TYGQkqxH/shingeki-no-kyojin-007-24.png','https://i.postimg.cc/3JB1z4Jr/shingeki-no-kyojin-007-25.png','https://i.postimg.cc/x115Qfcv/shingeki-no-kyojin-007-26.png','https://i.postimg.cc/jS3Xdp7G/shingeki-no-kyojin-007-27.png','https://i.postimg.cc/YS4x4dNj/shingeki-no-kyojin-007-28.png','https://i.postimg.cc/W4Qw00S8/shingeki-no-kyojin-007-29.png','https://i.postimg.cc/mDCNjh5s/shingeki-no-kyojin-007-30.png','https://i.postimg.cc/hvn85gk7/shingeki-no-kyojin-007-31.png','https://i.postimg.cc/MHY0kNw3/shingeki-no-kyojin-007-32.png','https://i.postimg.cc/Y2NzmGFN/shingeki-no-kyojin-007-33.png','https://i.postimg.cc/SNDLDBDJ/shingeki-no-kyojin-007-34.png','https://i.postimg.cc/BQqc5S5r/shingeki-no-kyojin-007-35.png'],
                 order: 7,
             },{
                 title: 'Howl',
-                cover_photo: '',
                 pages: ['https://i.postimg.cc/jSDfvLDF/shingeki-no-kyojin-008-01.png','https://i.postimg.cc/Xq2Zkb4W/shingeki-no-kyojin-008-02.png','https://i.postimg.cc/xT4Jkn6y/shingeki-no-kyojin-008-03.png','https://i.postimg.cc/0Q0KrS4b/shingeki-no-kyojin-008-04.png','https://i.postimg.cc/MHZMBTkt/shingeki-no-kyojin-008-05.png','https://i.postimg.cc/MTSjW5dC/shingeki-no-kyojin-008-06.png','https://i.postimg.cc/TPmDMFqj/shingeki-no-kyojin-008-07.png','https://i.postimg.cc/0yhw4Pm2/shingeki-no-kyojin-008-08.png','https://i.postimg.cc/9FMwFrYQ/shingeki-no-kyojin-008-09.png','https://i.postimg.cc/Hk8JXRKG/shingeki-no-kyojin-008-10.png','https://i.postimg.cc/N0hK4bqK/shingeki-no-kyojin-008-11.png','https://i.postimg.cc/XvwpDF4Q/shingeki-no-kyojin-008-12.png','https://i.postimg.cc/fLDJ4LbZ/shingeki-no-kyojin-008-13.png','https://i.postimg.cc/nVdM5nfb/shingeki-no-kyojin-008-14.png','https://i.postimg.cc/fygL0ffT/shingeki-no-kyojin-008-15.png','https://i.postimg.cc/T1P1w4m4/shingeki-no-kyojin-008-16.png','https://i.postimg.cc/nz2MnJsm/shingeki-no-kyojin-008-17.png','https://i.postimg.cc/TYphvBTy/shingeki-no-kyojin-008-18.png','https://i.postimg.cc/9FK0m1fL/shingeki-no-kyojin-008-19.png','https://i.postimg.cc/Z5NRC3B4/shingeki-no-kyojin-008-20.png','https://i.postimg.cc/MG8GRTVR/shingeki-no-kyojin-008-21.png','https://i.postimg.cc/KYr852DW/shingeki-no-kyojin-008-22.png','https://i.postimg.cc/W3NbWH91/shingeki-no-kyojin-008-23.png','https://i.postimg.cc/fL8W6fFj/shingeki-no-kyojin-008-24.png','https://i.postimg.cc/FzqrKshY/shingeki-no-kyojin-008-25.png','https://i.postimg.cc/RCbVdGwv/shingeki-no-kyojin-008-26.png','https://i.postimg.cc/MKMZFRYV/shingeki-no-kyojin-008-27.png','https://i.postimg.cc/ZKGYtRfg/shingeki-no-kyojin-008-28.png','https://i.postimg.cc/13Dm9Q2z/shingeki-no-kyojin-008-29.png','https://i.postimg.cc/43ZJy0RQ/shingeki-no-kyojin-008-30.png','https://i.postimg.cc/W4nsk72L/shingeki-no-kyojin-008-31.png','https://i.postimg.cc/0QyPdJQ6/shingeki-no-kyojin-008-32.png','https://i.postimg.cc/fLqZHTt8/shingeki-no-kyojin-008-33.png','https://i.postimg.cc/8cFGxQLN/shingeki-no-kyojin-008-34.png','https://i.postimg.cc/kGkCm1y8/shingeki-no-kyojin-008-35.png','https://i.postimg.cc/c1j0wCNH/shingeki-no-kyojin-008-36.png'],
                 order: 8,
             },{
                 title: 'Fire!',
-                cover_photo: '',
                 pages: ['https://i.postimg.cc/W1cVYyzc/shingeki-no-kyojin-009-01.png','https://i.postimg.cc/9FZ0fZqV/shingeki-no-kyojin-009-02.png','https://i.postimg.cc/h4JhHHDX/shingeki-no-kyojin-009-03.png','https://i.postimg.cc/9z36S4WY/shingeki-no-kyojin-009-04.png','https://i.postimg.cc/FzJtDbQK/shingeki-no-kyojin-009-05.png','https://i.postimg.cc/L4rhRN5N/shingeki-no-kyojin-009-06.png','https://i.postimg.cc/g2pJLjvh/shingeki-no-kyojin-009-07.png','https://i.postimg.cc/0yCNYvfB/shingeki-no-kyojin-009-08.png','https://i.postimg.cc/43Nxw02N/shingeki-no-kyojin-009-09.png','https://i.postimg.cc/FKWs6xwb/shingeki-no-kyojin-009-10.png','https://i.postimg.cc/QtvN8d8H/shingeki-no-kyojin-009-11.png','https://i.postimg.cc/vB4HwVdJ/shingeki-no-kyojin-009-12.png','https://i.postimg.cc/bY2N6kgb/shingeki-no-kyojin-009-13.png','https://i.postimg.cc/WzrNhczS/shingeki-no-kyojin-009-14.png','https://i.postimg.cc/rFXy7sZH/shingeki-no-kyojin-009-15.png','https://i.postimg.cc/yYm6KKw8/shingeki-no-kyojin-009-16.png','https://i.postimg.cc/bwqyNMhH/shingeki-no-kyojin-009-17.png','https://i.postimg.cc/fR5w3KW4/shingeki-no-kyojin-009-18.png','https://i.postimg.cc/ZqRJ6d0W/shingeki-no-kyojin-009-19.png','https://i.postimg.cc/jjFtcSJZ/shingeki-no-kyojin-009-20.png','https://i.postimg.cc/3R07cQX7/shingeki-no-kyojin-009-21.png','https://i.postimg.cc/vTRMR2hn/shingeki-no-kyojin-009-22.png','https://i.postimg.cc/WzMVsmYH/shingeki-no-kyojin-009-23.png','https://i.postimg.cc/QxJDPbTB/shingeki-no-kyojin-009-24.png','https://i.postimg.cc/qBn4c0Bx/shingeki-no-kyojin-009-25.png','https://i.postimg.cc/02sxc3bR/shingeki-no-kyojin-009-26.png','https://i.postimg.cc/bwYPjtxm/shingeki-no-kyojin-009-27.png','https://i.postimg.cc/9QxhXQ1C/shingeki-no-kyojin-009-28.png','https://i.postimg.cc/yNkzDCr9/shingeki-no-kyojin-009-29.png','https://i.postimg.cc/8C9gWXqY/shingeki-no-kyojin-009-30.png','https://i.postimg.cc/PxDsMzH5/shingeki-no-kyojin-009-31.png','https://i.postimg.cc/d3KMNkQm/shingeki-no-kyojin-009-32.png','https://i.postimg.cc/SRLBBSJ0/shingeki-no-kyojin-009-33.png','https://i.postimg.cc/WpMcFnS9/shingeki-no-kyojin-009-34.png','https://i.postimg.cc/9FC5G7nc/shingeki-no-kyojin-009-35.png','https://i.postimg.cc/BQpWNnrH/shingeki-no-kyojin-009-36.png','https://i.postimg.cc/y88MGzK5/shingeki-no-kyojin-009-37.png'],
                 order: 9,
             }
@@ -129,8 +110,8 @@ let mangas = [
         title: 'The promise neverland',
         cover_photo: 'https://i.postimg.cc/85YdTMfM/main-the-promise-neverland.jpg',
         description: 'Emma, Norman and Ray are three orphans who live happily in the idyllic Grace Field House orphanage, waiting for the moment when they will be assigned a foster family. Everything changes when they accidentally discover the horrifying reality of their existence, so they decide to rebel and fight to the last consequences in a dark and terrifying adventure. But his time is running out...',
-        category_id: 'shonen',
-        author_id: 'lucas',
+        category_id: 'Shonen',
+        company_id: 'Creative Minds',
         chapters: [
             {
                 title: 'Grace Field Home',
@@ -178,57 +159,47 @@ let mangas = [
         title: 'Bleach',
         cover_photo: 'https://i.postimg.cc/MGThBm3N/main-bleach.jpg',
         description: 'edit later',
-        category_id: 'shonen',
-        author_id: 'eric',
+        category_id: 'Shonen',
+        author_id: 'Jane',
         chapters: [
             {
                 title: 'Death & Strawberry',
-                cover_photo: 'https://static.wikia.nocookie.net/bleach/images/0/0c/Portada_capitulo_001.png/revision/latest/scale-to-width-down/1000?cb=20091201185214&path-prefix=es',
                 pages: ['https://i.postimg.cc/90nBvyYR/bleach-001-01.jpg','https://i.postimg.cc/MTt5mCcY/bleach-001-02.jpg','https://i.postimg.cc/G37z81nL/bleach-001-03.jpg','https://i.postimg.cc/C51NPckp/bleach-001-04.jpg','https://i.postimg.cc/RFvGfS0F/bleach-001-05.jpg','https://i.postimg.cc/Dzkxvdk1/bleach-001-06.jpg','https://i.postimg.cc/rp1QK0M3/bleach-001-07.jpg','https://i.postimg.cc/zGRdY2MJ/bleach-001-08.jpg','https://i.postimg.cc/xTX5LF9K/bleach-001-09.jpg','https://i.postimg.cc/X7t8Lcvt/bleach-001-10.jpg','https://i.postimg.cc/YSHxKrY3/bleach-001-11.jpg','https://i.postimg.cc/YCgxsGG0/bleach-001-12.jpg','https://i.postimg.cc/KYDDm65y/bleach-001-13.jpg','https://i.postimg.cc/Y92f0dXL/bleach-001-14.jpg','https://i.postimg.cc/4d8v9pML/bleach-001-15.jpg','https://i.postimg.cc/C5zGHzpF/bleach-001-16.jpg','https://i.postimg.cc/0jFptP97/bleach-001-17.jpg','https://i.postimg.cc/qB5XBX2g/bleach-001-18.jpg','https://i.postimg.cc/Dy4QSJc6/bleach-001-19.jpg','https://i.postimg.cc/t403WqSj/bleach-001-20.jpg','https://i.postimg.cc/9QGGB6Kq/bleach-001-21.jpg','https://i.postimg.cc/1zsD7W17/bleach-001-22.jpg','https://i.postimg.cc/7L90FgxH/bleach-001-23.jpg','https://i.postimg.cc/mDrCBtDQ/bleach-001-24.jpg','https://i.postimg.cc/gJBRJmX1/bleach-001-25.jpg','https://i.postimg.cc/2ybWLMny/bleach-001-26.jpg','https://i.postimg.cc/C53qG74N/bleach-001-27.jpg','https://i.postimg.cc/FF83XFQL/bleach-001-28.jpg','https://i.postimg.cc/vHn9YRQS/bleach-001-29.jpg','https://i.postimg.cc/BncKFxPT/bleach-001-30.jpg','https://i.postimg.cc/6QWGfyCD/bleach-001-31.jpg','https://i.postimg.cc/3wt0SYBW/bleach-001-32.jpg','https://i.postimg.cc/QtV9vw4m/bleach-001-33.jpg','https://i.postimg.cc/QtP9Dmv3/bleach-001-34.jpg','https://i.postimg.cc/x8zk1HSb/bleach-001-35.jpg','https://i.postimg.cc/XX6rGJV1/bleach-001-36.jpg','https://i.postimg.cc/BZXV4CXw/bleach-001-37.jpg','https://i.postimg.cc/XNmDJy5N/bleach-001-38.jpg','https://i.postimg.cc/rF4ZtFG1/bleach-001-39.jpg','https://i.postimg.cc/wjdf58FS/bleach-001-40.jpg','https://i.postimg.cc/sg9nw6N1/bleach-001-41.jpg','https://i.postimg.cc/bvymMx7g/bleach-001-42.jpg','https://i.postimg.cc/rpffLdck/bleach-001-43.jpg','https://i.postimg.cc/SsjDQyNz/bleach-001-44.jpg','https://i.postimg.cc/rmbgKvKZ/bleach-001-45.jpg','https://i.postimg.cc/d3y6d4Cs/bleach-001-46.jpg','https://i.postimg.cc/tRZ2LCMK/bleach-001-47.jpg','https://i.postimg.cc/Y25bkBch/bleach-001-48.jpg','https://i.postimg.cc/MK1tp3xt/bleach-001-49.jpg','https://i.postimg.cc/nhZ2jKhx/bleach-001-50.jpg','https://i.postimg.cc/g2DDvwxZ/bleach-001-51.jpg','https://i.postimg.cc/cJLcTs35/bleach-001-52.jpg','https://i.postimg.cc/8CXm0qBk/bleach-001-53.jpg','https://i.postimg.cc/Jny5VPPN/bleach-001-54.jpg','https://i.postimg.cc/76pMx0Wp/bleach-001-55.jpg'],
                 order: 1,
             },{
                 title: 'Starter',
-                cover_photo: 'https://static.wikia.nocookie.net/bleach/images/1/19/Portada_capitulo_002.png/revision/latest?cb=20091201213605&path-prefix=es',
                 pages: ['https://i.postimg.cc/g2YykYgk/bleach-002-01.jpg','https://i.postimg.cc/jdYQm6Nf/bleach-002-02.jpg','https://i.postimg.cc/66vfMb7w/bleach-002-03.jpg','https://i.postimg.cc/0NjpDVgT/bleach-002-04.jpg','https://i.postimg.cc/63Gn1Tpz/bleach-002-05.jpg','https://i.postimg.cc/kXNFmVFp/bleach-002-06.jpg','https://i.postimg.cc/1zdDHDsf/bleach-002-07.jpg','https://i.postimg.cc/RZX7WjY1/bleach-002-08.jpg','https://i.postimg.cc/prbzNx9v/bleach-002-09.jpg','https://i.postimg.cc/NF6TBVTH/bleach-002-10.jpg','https://i.postimg.cc/mZC7Ycqg/bleach-002-11.jpg','https://i.postimg.cc/hPnTpDWb/bleach-002-12.jpg','https://i.postimg.cc/SNG8PBm0/bleach-002-13.jpg','https://i.postimg.cc/9QFTHLfD/bleach-002-14.jpg','https://i.postimg.cc/2ScWknq2/bleach-002-15.jpg','https://i.postimg.cc/XvrCpXd3/bleach-002-16.jpg','https://i.postimg.cc/7LjT7Dnz/bleach-002-17.jpg','https://i.postimg.cc/KzL3DV0H/bleach-002-18.jpg','https://i.postimg.cc/yxyJwR4h/bleach-002-19.jpg','https://i.postimg.cc/HngcZ2Ks/bleach-002-20.jpg','https://i.postimg.cc/G3FsBW8B/bleach-002-21.jpg','https://i.postimg.cc/rFqR5fxf/bleach-002-22.jpg','https://i.postimg.cc/Hs3czbtd/bleach-002-23.jpg'],
                 order: 2,
             },{
                 title: 'Head-Hittin',
-                cover_photo: 'https://static.wikia.nocookie.net/bleach/images/7/79/Portada_capitulo_003.jpg/revision/latest?cb=20091203125057&path-prefix=es',
                 pages: ['https://i.postimg.cc/L6s6HwzF/bleach-003-01.jpg','https://i.postimg.cc/xCyTCSxn/bleach-003-02.jpg','https://i.postimg.cc/tRk4Gpnz/bleach-003-03.jpg','https://i.postimg.cc/mDGgBrSm/bleach-003-04.jpg','https://i.postimg.cc/7ZdLt9J8/bleach-003-05.jpg','https://i.postimg.cc/J0prN5CF/bleach-003-06.jpg','https://i.postimg.cc/SK9xB9cX/bleach-003-07.jpg','https://i.postimg.cc/7hHPJQd7/bleach-003-08.jpg','https://i.postimg.cc/sD0f1mcQ/bleach-003-09.jpg','https://i.postimg.cc/mgzL99Xd/bleach-003-10.jpg','https://i.postimg.cc/bw7z9v4q/bleach-003-11.jpg','https://i.postimg.cc/mr7TXsGC/bleach-003-12.jpg','https://i.postimg.cc/9MVCsnWS/bleach-003-13.jpg','https://i.postimg.cc/9MpC2Y0f/bleach-003-14.jpg','https://i.postimg.cc/prLxL55J/bleach-003-15.jpg','https://i.postimg.cc/MH3wMZy2/bleach-003-16.jpg','https://i.postimg.cc/kMTqhsL1/bleach-003-17.jpg','https://i.postimg.cc/154sx6Q9/bleach-003-18.jpg','https://i.postimg.cc/gk5dGJz3/bleach-003-19.jpg','https://i.postimg.cc/qv3rqTqS/bleach-003-20.jpg','https://i.postimg.cc/Xv6byzyJ/bleach-003-21.jpg'],
                 order: 3,
             },{
                 title: 'Why do you eat it?',
-                cover_photo: 'https://static.wikia.nocookie.net/bleach/images/4/42/004._WHY_DO_YOU_EAT_IT.jpg/revision/latest?cb=20111105010426&path-prefix=es',
                 pages: ['https://i.postimg.cc/nzVN4bVH/bleach-004-01.jpg','https://i.postimg.cc/cJBVt4S9/bleach-004-02.jpg','https://i.postimg.cc/1tW2MC4D/bleach-004-03.jpg','https://i.postimg.cc/FHtqPJFC/bleach-004-04.jpg','https://i.postimg.cc/L5w7FJtX/bleach-004-05.jpg','https://i.postimg.cc/MKfNbYwj/bleach-004-06.jpg','https://i.postimg.cc/BZVRKVr0/bleach-004-07.jpg','https://i.postimg.cc/vTcjKr6k/bleach-004-08.jpg','https://i.postimg.cc/K8nWCvRG/bleach-004-09.jpg','https://i.postimg.cc/8CNYGQ6h/bleach-004-10.jpg','https://i.postimg.cc/fbCrT2c1/bleach-004-11.jpg','https://i.postimg.cc/sX20BYKx/bleach-004-12.jpg','https://i.postimg.cc/XJD19rD8/bleach-004-13.jpg','https://i.postimg.cc/gjXSsGCP/bleach-004-14.jpg','https://i.postimg.cc/hvkC3HnQ/bleach-004-15.jpg','https://i.postimg.cc/RCW4yK9v/bleach-004-16.jpg','https://i.postimg.cc/bY4phrNk/bleach-004-17.jpg','https://i.postimg.cc/GmCR4fDp/bleach-004-18.jpg','https://i.postimg.cc/3Jp7Jhd6/bleach-004-19.jpg'],
                 order: 4,
             },{
                 title: 'Binda blinda',
-                cover_photo: 'https://static.wikia.nocookie.net/bleach/images/2/22/Bleach5a.jpg/revision/latest?cb=20120522205759&path-prefix=es',
                 pages: ['https://i.postimg.cc/xCkhxGm7/bleach-005-01.jpg','https://i.postimg.cc/NjBhsHh9/bleach-005-02.jpg','https://i.postimg.cc/0QL3L6dN/bleach-005-03.jpg','https://i.postimg.cc/zf24F2yK/bleach-005-04.jpg','https://i.postimg.cc/qM8VHGFH/bleach-005-05.jpg','https://i.postimg.cc/nrB5ZH0G/bleach-005-06.jpg','https://i.postimg.cc/BvndDfnJ/bleach-005-07.jpg','https://i.postimg.cc/zGjsVG5d/bleach-005-08.jpg','https://i.postimg.cc/MZQg1Dqf/bleach-005-09.jpg','https://i.postimg.cc/KvhwfM8q/bleach-005-10.jpg','https://i.postimg.cc/3Jj6cxyK/bleach-005-11.jpg','https://i.postimg.cc/Z5Tgtz36/bleach-005-12.jpg','https://i.postimg.cc/g0jTjygJ/bleach-005-13.jpg','https://i.postimg.cc/R0YbH3YT/bleach-005-14.jpg','https://i.postimg.cc/P527dVz9/bleach-005-15.jpg','https://i.postimg.cc/d1TNmsPc/bleach-005-16.jpg','https://i.postimg.cc/J0V6pfMD/bleach-005-17.jpg','https://i.postimg.cc/8cRy9Zzy/bleach-005-18.jpg','https://i.postimg.cc/h4T3Xt19/bleach-005-19.jpg'],
                 order: 5,
             },{
                 title: 'Microcrack',
-                cover_photo: 'https://static.wikia.nocookie.net/bleach/images/c/c7/Portada_capitulo_006.jpg/revision/latest?cb=20091204203058&path-prefix=es',
                 pages: ['https://i.postimg.cc/bwCm7Dqj/bleach-006-01.jpg','https://i.postimg.cc/D0T6r1P1/bleach-006-02.jpg','https://i.postimg.cc/jdRvCQ5b/bleach-006-03.jpg','https://i.postimg.cc/C5sNmdcX/bleach-006-04.jpg','https://i.postimg.cc/RC7XMbvd/bleach-006-05.jpg','https://i.postimg.cc/SKngkSKY/bleach-006-06.jpg','https://i.postimg.cc/QMv0M2B4/bleach-006-07.jpg','https://i.postimg.cc/63Rz4Mn9/bleach-006-08.jpg','https://i.postimg.cc/c4Th3gg8/bleach-006-09.jpg','https://i.postimg.cc/pLTZJWzc/bleach-006-10.jpg','https://i.postimg.cc/CxQ4v34h/bleach-006-11.jpg','https://i.postimg.cc/G2kJmHnt/bleach-006-12.jpg','https://i.postimg.cc/Y9cz7QVT/bleach-006-13.jpg','https://i.postimg.cc/PqvQ0S6m/bleach-006-14.jpg','https://i.postimg.cc/44QQC71F/bleach-006-15.jpg','https://i.postimg.cc/yxshgs7P/bleach-006-16.jpg','https://i.postimg.cc/fyCcYpLh/bleach-006-17.jpg','https://i.postimg.cc/BQZcJSYZ/bleach-006-18.jpg','https://i.postimg.cc/m2d3DvJY/bleach-006-19.jpg'],
                 order: 6,
             },{
                 title: 'The pink cheeked paraket',
-                cover_photo: 'https://static.wikia.nocookie.net/bleach/images/4/48/Portada_capitulo_007.jpg/revision/latest?cb=20091206193628&path-prefix=es',
                 pages: ['https://i.postimg.cc/D0xGSGjv/bleach-007-01.jpg','https://i.postimg.cc/0yMSNbpv/bleach-007-02.jpg','https://i.postimg.cc/02HmxpKZ/bleach-007-03.jpg','https://i.postimg.cc/gjzRcsKt/bleach-007-04.jpg','https://i.postimg.cc/Y9wYZMLH/bleach-007-05.jpg','https://i.postimg.cc/KcfBpXZ6/bleach-007-06.jpg','https://i.postimg.cc/50qLMT8F/bleach-007-07.jpg','https://i.postimg.cc/yYN9wfxk/bleach-007-08.jpg','https://i.postimg.cc/Hkqy8d2y/bleach-007-09.jpg','https://i.postimg.cc/LsjZzwC0/bleach-007-10.jpg','https://i.postimg.cc/1tPVMBbR/bleach-007-11.jpg','https://i.postimg.cc/bJTD5bjx/bleach-007-12.jpg','https://i.postimg.cc/2ySbN6zP/bleach-007-13.jpg','https://i.postimg.cc/D0pWvT0m/bleach-007-14.jpg','https://i.postimg.cc/NGd271DY/bleach-007-15.jpg','https://i.postimg.cc/zX3bdV2h/bleach-007-16.jpg','https://i.postimg.cc/TYSyBfB4/bleach-007-17.jpg','https://i.postimg.cc/K8MK2C2v/bleach-007-18.jpg','https://i.postimg.cc/q7HNMQJc/bleach-007-19.jpg','https://i.postimg.cc/KY7RKLj6/bleach-007-20.jpg','https://i.postimg.cc/ZRT06RyC/bleach-007-21.jpg','https://i.postimg.cc/LXN5Dpzv/bleach-007-22.jpg','https://i.postimg.cc/Wzz3fH8V/bleach-007-23.jpg'],
                 order: 7,
             },{
-                title: 'Chase Chad Around',
-                cover_photo: 'https://static.wikia.nocookie.net/bleach/images/8/8f/Portada_capitulo_008.jpg/revision/latest?cb=20091212141236&path-prefix=es',
+                title: 'Chasing Chad',
                 pages: ['https://i.postimg.cc/gJScRKWT/bleach-008-01.jpg','https://i.postimg.cc/fLTTJr6d/bleach-008-02.jpg','https://i.postimg.cc/6Qhp6X1w/bleach-008-03.jpg','https://i.postimg.cc/PrBx2KwG/bleach-008-04.jpg','https://i.postimg.cc/gkwjV1rq/bleach-008-05.jpg','https://i.postimg.cc/g0p0PJsN/bleach-008-06.jpg','https://i.postimg.cc/bwkvMbxZ/bleach-008-07.jpg','https://i.postimg.cc/7PtbTqPZ/bleach-008-08.jpg','https://i.postimg.cc/3Nk8ZDrJ/bleach-008-09.jpg','https://i.postimg.cc/59rN2ppH/bleach-008-10.jpg','https://i.postimg.cc/Vv2YZL59/bleach-008-11.jpg','https://i.postimg.cc/5NF9Yvks/bleach-008-12.jpg','https://i.postimg.cc/7Z8Hg6Fw/bleach-008-13.jpg','https://i.postimg.cc/3xXK9hhp/bleach-008-14.jpg','https://i.postimg.cc/XvnnzPNP/bleach-008-15.jpg','https://i.postimg.cc/vmXGFvcZ/bleach-008-16.jpg','https://i.postimg.cc/G22dcsyJ/bleach-008-17.jpg','https://i.postimg.cc/sXNy1DPF/bleach-008-18.jpg','https://i.postimg.cc/j2nTf0vD/bleach-008-19.jpg','https://i.postimg.cc/bdXhHCF3/bleach-008-20.jpg'],
                 order: 8,
             },{
-                title: 'Monster and a Transfer (Struck Down)',
-                cover_photo: 'https://static.wikia.nocookie.net/bleach/images/b/bf/Portada_capitulo_009.jpg/revision/latest?cb=20091213180747&path-prefix=es',
+                title: 'Smack down',
                 pages: ['https://i.postimg.cc/bYZSgZBt/bleach-009-01.jpg','https://i.postimg.cc/L83J5Lnr/bleach-009-02.jpg','https://i.postimg.cc/BZRLVJrw/bleach-009-03.jpg','https://i.postimg.cc/vZs1G3Hr/bleach-009-04.jpg','https://i.postimg.cc/d0WDmFR6/bleach-009-05.jpg','https://i.postimg.cc/Gp3HytD9/bleach-009-06.jpg','https://i.postimg.cc/xTHJrWYj/bleach-009-07.jpg','https://i.postimg.cc/Twp1tsC6/bleach-009-08.jpg','https://i.postimg.cc/4dqdq1Sh/bleach-009-09.jpg','https://i.postimg.cc/rs4mktBZ/bleach-009-10.jpg','https://i.postimg.cc/G3T9YZ4P/bleach-009-11.jpg','https://i.postimg.cc/CLy54m83/bleach-009-12.jpg','https://i.postimg.cc/wjgBCM0F/bleach-009-13.jpg','https://i.postimg.cc/nh2LpxWx/bleach-009-14.jpg','https://i.postimg.cc/N00j0VhH/bleach-009-15.jpg','https://i.postimg.cc/25X8LwmX/bleach-009-16.jpg','https://i.postimg.cc/zBbDCgGD/bleach-009-17.jpg','https://i.postimg.cc/gJCzN2xV/bleach-009-18.jpg','https://i.postimg.cc/yx0V5CRw/bleach-009-19.jpg'],
                 order: 9,
             },{
-                title: 'Monster and a Transfer pt.2 (The Deathberry)',
-                cover_photo: 'https://static.wikia.nocookie.net/bleach/images/e/ee/Portada_capitulo_010.jpg/revision/latest?cb=20091214125107&path-prefix=es',
+                title: 'The substitue',
                 pages: ['https://i.postimg.cc/3NjT1C5h/bleach-010-01.jpg','https://i.postimg.cc/vBVMgw0c/bleach-010-02.jpg','https://i.postimg.cc/ht2KNrJP/bleach-010-03.jpg','https://i.postimg.cc/X733JhdY/bleach-010-04.jpg','https://i.postimg.cc/CKtSxxH3/bleach-010-05.jpg','https://i.postimg.cc/FzXv0C6G/bleach-010-06.jpg','https://i.postimg.cc/3r2Y37yq/bleach-010-07.jpg','https://i.postimg.cc/3wW3hvpj/bleach-010-08.jpg','https://i.postimg.cc/KvNbgNDr/bleach-010-09.jpg','https://i.postimg.cc/Z5shw5gW/bleach-010-10.jpg','https://i.postimg.cc/Hkkg0ySG/bleach-010-11.jpg','https://i.postimg.cc/XvZ6m0SQ/bleach-010-12.jpg','https://i.postimg.cc/HLf1CPTH/bleach-010-13.jpg','https://i.postimg.cc/3Rm5rCwG/bleach-010-14.jpg','https://i.postimg.cc/3NFsm8mJ/bleach-010-15.jpg','https://i.postimg.cc/brPXZDGB/bleach-010-16.jpg','https://i.postimg.cc/kMN3kcz3/bleach-010-17.jpg','https://i.postimg.cc/TYRMGbvy/bleach-010-18.jpg','https://i.postimg.cc/dt4M00J5/bleach-010-19.jpg'],
                 order: 10,
             }
@@ -237,8 +208,8 @@ let mangas = [
         title: 'Another',
         cover_photo: 'https://i.postimg.cc/j5kdphLr/main-another.jpg',
         description: 'This story revolves around a curse that affects class 3-3 of Yomiyama High School. It all begins when the protagonist, Kōichi Sakakibara, moves to this school and meets Mei Misaki, a girl who is ignored by her classmates due to a supposed curse that weighs on her. As Kōichi becomes more involved in the mystery surrounding class 3-3, he discovers that a student in the class died 26 years ago, and that every year someone in that class mysteriously dies since then. Kōichi and Mei try to uncover the truth behind the curse and end the wave of death while fighting the danger that lurks around them.',
-        category_id: 'seinen',
-        author_id: 'eric',
+        category_id: 'Seinen',
+        author_id: 'Jane',
         chapters: [
             {
                 title: 'I',
@@ -286,8 +257,8 @@ let mangas = [
         title: 'Gantz',
         cover_photo: 'https://i.postimg.cc/26z0Z0yQ/YHEVOBAXLFF4-FC55-L2-HJ2-JPS4-E.jpg',
         description: 'This is a sci-fi action story that follows a group of people who have been brought back to life by a mysterious sphere called Gantz and forced to participate in dangerous missions against strange and dangerous creatures. It all starts when the protagonist, Kei Kurono, is killed in an accident and is revived by Gantz along with other people who have recently died. As they fight to survive and complete Gantz´s missions, Kei and his companions discover that there is much more at stake than just their own lives.',
-        category_id: 'seinen',
-        author_id: 'lucas',
+        category_id: 'Seinen',
+        company_id: 'Creative Minds',
         chapters: [
             {
                 title: 'I',
@@ -335,8 +306,8 @@ let mangas = [
         title: 'Punpun',
         cover_photo: 'https://i.postimg.cc/xCsc02ph/main-buenasnochespunpun.jpg',
         description: 'This story follows the life of Onodera Punpun, a high school boy who struggles with emotional issues and family problems as he tries to grow up and find his place in the world. Punpun is not your typical elementary school student. Despite the fact that he feels the same impulses as his peers, he begins to discover girls and sex, the family situation is not the most stable and he must face it as best he can... and in principle, that is visualizing himself as an amorphous bird in a strange environment.',
-        category_id: 'seinen',
-        author_id: 'lucas',
+        category_id: 'Seinen',
+        company_id: 'Creative Minds',
         chapters: [
             {
                 title: '1',
@@ -384,8 +355,8 @@ let mangas = [
         title: 'Flashpoint',
         cover_photo: 'https://i.postimg.cc/bJjf6Q43/main-flashpoint.jpg',
         description: 'edit later',
-        category_id: 'comics',
-        author_id: 'eric',
+        category_id: 'Kodomo',
+        author_id: 'Jane',
         chapters: [
             {
                 title: 'Chapter 1',
@@ -413,8 +384,8 @@ let mangas = [
         title: 'Planet Hulk',
         cover_photo: 'https://i.postimg.cc/V6HWZ9k2/main-planet-hulk.jpg',
         description: 'edit later',
-        category_id: 'comics',
-        author_id: 'eric',
+        category_id: 'Kodomo',
+        author_id: 'Jane',
         chapters: [
             {
                 title: 'Chapter 1',
@@ -462,8 +433,8 @@ let mangas = [
         title: 'Secret invasion',
         cover_photo: 'https://i.postimg.cc/hjG00Zc9/main-secret-invasion.jpg',
         description: 'edit later',
-        category_id: 'comics',
-        author_id: 'alejandro',
+        category_id: 'Kodomo',
+        author_id: 'John',
         chapters: [
             {
                 title: 'Chapter 1',
@@ -507,8 +478,8 @@ let mangas = [
         title: 'Superman up in the sky',
         cover_photo: 'https://i.postimg.cc/g0XV2hSy/superman-sky-001-01.jpg',
         description: 'edit later',
-        category_id: 'comics',
-        author_id: 'alejandro',
+        category_id: 'Kodomo',
+        author_id: 'John',
         chapters: [
             {
                 title: 'Chapter 1',
@@ -540,8 +511,8 @@ let mangas = [
         title: 'World War Hulk',
         cover_photo: 'https://i.postimg.cc/cHtX22GS/main-world-war-hulk.jpg',
         description: 'edit later',
-        category_id: 'comics',
-        author_id: 'eric',
+        category_id: 'Kodomo',
+        author_id: 'Jane',
         chapters: [
             {
                 title: 'Chapter 1',
@@ -569,8 +540,8 @@ let mangas = [
         title: 'Pokemon',
         cover_photo: 'https://i.postimg.cc/3xPP69GH/201-2011893-pokmon-adventures-special-pokemon-adventures-book-volume-3.jpg',
         description: 'edit later',
-        category_id: 'shonen',
-        author_id: 'lucas',
+        category_id: 'Shonen',
+        company_id: 'Creative Minds',
         chapters: [
             {
                 title: 'Red',
@@ -634,8 +605,8 @@ let mangas = [
         title: 'Citrus',
         cover_photo: 'https://i.postimg.cc/WpgtffJs/citrus-anime-temporada-2-yuri-jpg-743561205.jpg',
         description: 'edit later',
-        category_id: 'shojo',
-        author_id: 'lucas',
+        category_id: 'Shojo',
+        company_id: 'Creative Minds',
         chapters: [
             {
                 title: 'Chapter 1',
@@ -691,8 +662,8 @@ let mangas = [
         title: 'Ao Haru Ride',
         cover_photo: 'https://i.postimg.cc/ydWYPLCC/ao-haru-ride-752359695-large.jpg',
         description: 'edit later',
-        category_id: 'shojo',
-        author_id: 'eric',
+        category_id: 'Shojo',
+        author_id: 'Jane',
         chapters: [
             {
                 title: '001',
@@ -731,23 +702,55 @@ let mangas = [
     }
 ]
 
-let insert_mangas = async()=> {
-    for (let manga of mangas) {
-        let author = await Author.findOne({ name:manga.author_id })
-        manga.author_id = await author._id
-        let company = await Company.findOne({ name:manga.company_id })
-        manga.company_id = await company._id
-        let category = await Category.findOne({ name:manga.category_id })
-        manga.category_id = await category._id
-        let one = await Manga.create(manga)
-        console.log('id of '+one.title+': '+one._id)
-        for (let chapter of manga.chapters) {
-            chapter.manga_id = one._id
-            chapter.cover_photo = chapter.pages[0]
-            await Chapter.create(chapter)
+let insert_mangas = async () => {
+    try {
+        for (let manga of mangas) {
+            // Validar si tiene autor o compañía
+            if (!manga.author_id && !manga.company_id) {
+                throw new Error(`Manga "${manga.title}" must have either an author or a company`)
+            }
+
+            // Buscar el autor (si existe)
+            if (manga.author_id) {
+                let author = await Author.findOne({ name: manga.author_id })
+                if (!author) {
+                    throw new Error(`Author not found: ${manga.author_id}`)
+                }
+                manga.author_id = author._id
+            }
+
+            // Buscar la compañía (si existe)
+            if (manga.company_id) {
+                let company = await Company.findOne({ name: manga.company_id })
+                if (!company) {
+                    throw new Error(`Company not found: ${manga.company_id}`)
+                }
+                manga.company_id = company._id
+            }
+
+            // Buscar la categoría
+            let category = await Category.findOne({ name: manga.category_id })
+            if (!category) {
+                throw new Error(`Category not found: ${manga.category_id}`)
+            }
+            manga.category_id = category._id
+
+            // Crear el manga
+            let one = await Manga.create(manga)
+            console.log(`ID of ${one.title}: ${one._id}`)
+
+            // Crear los capítulos asociados
+            for (let chapter of manga.chapters) {
+                chapter.manga_id = one._id
+                chapter.cover_photo = chapter.pages[0] // Primera página como portada
+                await Chapter.create(chapter)
+            }
+            console.log(`${one.title} & chapters created!`)
         }
-        console.log(one.title+' & chapters created!')
+        console.log('done!')
+    } catch (error) {
+        console.error('Error inserting mangas:', error.message)
     }
-    console.log('done!')
 }
 insert_mangas()
+
