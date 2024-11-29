@@ -7,6 +7,10 @@
   "scripts": {
     "start": "node ./server.js",
     "dev": "nodemon ./server.js",
+    "insertDataReactions": "node ./models/data/reactions.js",
+    "dataUser": "node ./models/data/users.js",
+    "dataAuthor": "node ./models/data/authors.js",
+    "dataCompany": "node ./models/data/companies.js",
     "dataCategory":"node ./models/data/categories.js",
     "dataComment":"node ./models/data/comments.js"
   },
