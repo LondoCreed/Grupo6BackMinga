@@ -10,8 +10,10 @@
     "insertDataReactions": "node ./models/data/reactions.js",
     "dataUser": "node ./models/data/users.js",
     "dataMangas": "node ./models/data/mangas.js",
-    "dataData": "node ./models/data/mangas.js",
-    "dataChapters": "node ./models/data/chapters.js"
+    "dataAuthor": "node ./models/data/authors.js",
+    "dataCompany": "node ./models/data/companies.js",
+    "dataCategory":"node ./models/data/categories.js",
+    "dataComment":"node ./models/data/comments.js"
   },
   "keywords": [],
   "author": "",
