@@ -17,8 +17,9 @@ server.use(express.urlencoded({ extended: true })) //permite por medio de la url
 server.use(cors()) //no deja pasar a cualquiera
 server.use(morgan('dev'))
 server.use('/api', indexRouter)
+server.use(bad_request_handler)
 server.use(not_found_handler)
 server.use(error_handler)
-server.use(bad_request_handler)
+
 
 server.listen(PORT, ready)
