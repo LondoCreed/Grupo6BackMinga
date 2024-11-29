@@ -7,7 +7,7 @@ const schemaCategory = joi.object({
     description:joi.string().required(),
     coverPhoto:joi.string().required(),
     characterPhoto:joi.string().required(),
-    adminId:joi.ObjectId(),
+    adminId:joi.string(),
     createAt:joi.date(),
     updateAt:joi.date()
 })
