@@ -4,7 +4,7 @@ let url = process.env.URI_MONGO
 
 console.log("URL: ", url)
 
-async function conexionBD (){
+async function DBconnection (){
     try {
         await mongoose.connect(process.env.URI_MONGO)
         console.log("Database connected")
@@ -13,4 +13,4 @@ async function conexionBD (){
     }
 }
 
-conexionBD ()
+DBconnection ()

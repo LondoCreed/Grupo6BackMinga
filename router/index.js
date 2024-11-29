@@ -14,12 +14,9 @@ router.use('/user', userRouter)
 router.use('/authors', authorRouter)
 router.use('/companies', companyRouter)
 router.use('/reactions', reactionsRouter);
-<<<<<<< HEAD
 router.use('/mangas', mangasRouter)
 router.use('/chapter', chaptersRouter);
-=======
 router.use("/categories", routerCategory)
 router.use("/comments",routerComment)
->>>>>>> main
 
 export default router
