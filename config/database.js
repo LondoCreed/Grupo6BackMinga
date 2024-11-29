@@ -2,12 +2,12 @@ import mongoose from "mongoose"
 
 let url = process.env.URI_MONGO
 
-console.log("la url es: ", url)
+console.log("URL: ", url)
 
 async function conexionBD (){
     try {
         await mongoose.connect(process.env.URI_MONGO)
-        console.log("Base de datos conectada")
+        console.log("Database connected")
     } catch (error){
         console.log(error)
     }
