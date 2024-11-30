@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose"
 
-let collection = "Reactions"
+let collection = "reactions"
 let reactionSchema = new Schema({
   manga_id: { 
     type: Schema.Types.ObjectId, 
