@@ -4,15 +4,11 @@ let allComments= async (req,res,next)=>{
     try {
         let all = await Comment.find()
         return res.status(200).json({
-            response:all
+            response:all,
         })
     } catch (error) {
         next(error)
     }
 }
-
-
-
-
 
 export {allComments}
