@@ -1,6 +1,6 @@
 import { Router } from "express"
-import { allCategories } from "../controllers/categories/read.js"
 import { categoryCreated } from "../controllers/categories/create.js"
+import { allCategories } from "../controllers/categories/read.js"
 import {updateCategory} from "../controllers/categories/update.js"
 import {deletedCategory} from "../controllers/categories/deleted.js"
 import validator from "../middlewares/validator.js"
