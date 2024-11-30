@@ -1,6 +1,6 @@
 import { Router } from "express"
 import userRouter from './user.js'
-import reactionsRouter from './routerReactions.js'
+import reactionsRouter from './reactions.js'
 import authorRouter from './author.js'
 import companyRouter from './company.js'
 import routerCategory from "./categories.js"
