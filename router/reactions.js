@@ -10,7 +10,7 @@ import reactionSchema from "../schemas/reactionSchema.js";
 const routerReactions = Router()
 
 routerReactions.post('/create', validator(reactionSchema), createReaction);
-routerReactions.get('/', allReactions);
+routerReactions.get('/all', allReactions);
 routerReactions.get('/id/:id', reactionById);
 routerReactions.put('/update/:id', updateReaction);
 routerReactions.delete('/delete/:id', deleteReaction);
