@@ -12,8 +12,8 @@ let registerUser = async (req, res, next) => {
             user: created
         })
     } catch (error) {
-        console.log(error);
-        
+        next(error)
+
     }
 }
 

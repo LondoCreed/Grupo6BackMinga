@@ -5,16 +5,16 @@ const update = async (req, res, next) => {
         let user = req.body
         let update = await User.findByIdAndUpdate(
             user._id,
-            user, 
+            user,
             { new: true }
         )
         return res.status(200).json({
             response: update
         })
-        
+
     } catch (error) {
-       console.log(error);
-       
+        next(error)
+
     }
 }
 
