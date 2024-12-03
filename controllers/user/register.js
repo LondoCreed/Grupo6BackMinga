@@ -1,5 +1,5 @@
 
-import User from "../../models/User.js";
+import User from '../../models/User.js'
 
 let registerUser = async (req, res, next) => {
     try {
@@ -7,14 +7,25 @@ let registerUser = async (req, res, next) => {
         user.online = true;
         user.role = "0";
 
-        let created = await User.create(user);
+        let newUser = await User.create(user);
+
         return res.status(201).json({
-            user: created
-        })
+            success: true,
+            response: {
+                user: {
+                    email: newUser.email,
+                    photo: newUser.photo,
+                    online: true
+                },
+                token: req.token
+            },
+            message: 'User registered successfully'
+        });
     } catch (error) {
-        next(error)
-
+        next(error);
     }
-}
+};
 
-export default registerUser
+
+
+export default registerUser;
