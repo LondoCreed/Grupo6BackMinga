@@ -1,33 +1,34 @@
-import "dotenv/config.js"
-import "../../config/database.js"
-import Reaction from "../Reaction.js"
-
-//pendiente modificar la data con ids reales
+import 'dotenv/config'
+import '../../config/database.js'
+import Reaction from '../Reaction.js'
 
 let reactions = [
     {
-        manga_id: "674a4b9ea643451aa760d1d2",
-        author_id: "674a14de0258387b16b79577",
-        company_id: "674a153cf93819cccf43ca4c",
-        reaction: "1"
+        manga_id: '507f1f77bcf86cd799439011',
+        author_id: null,
+        company_id: null,
+        reaction: "like"   
     },
     {
-        manga_id: "674a4b9ea643451aa760d1d2",
-        author_id: "674a14de0258387b16b79577",
-        company_id: "674a153cf93819cccf43ca4c",
-        reaction: "2"
+        manga_id: '507f1f77bcf86cd799439012',
+        author_id: null,
+        company_id: null,
+        reaction: "love"     
     },
     {
-        manga_id: "674a4b9ea643451aa760d1d2",
-        author_id: "674a14de0258387b16b79577",
-        company_id: "674a153cf93819cccf43ca4c",
+        manga_id: '507f1f77bcf86cd799439013',
+        author_id: null,
+        company_id: null,
+        reaction: "favorite" 
+    },
+    {
+        manga_id: '507f1f77bcf86cd799439014',
+        author_id: null,
+        company_id: null,
+        reaction: "amazing" 
     }
 ]
 
 Reaction.insertMany(reactions)
-    .then(() => {
-        console.log("Reactions inserted successfully.")
-    })
-    .catch((error) => {
-        console.error("Error inserting Reactions:", error)
-    })
+    .then(docs => console.log('Reactions created:', docs))
+    .catch(err => console.log('Error:', err))

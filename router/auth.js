@@ -21,7 +21,7 @@ routerAuth.get(
     '/signin/google/callback',
     passportGoogle.authenticate('google', { session: false, failureRedirect: '/login' }),
     generateToken,
-    signinGoogle
+    signinGoogle 
 )
 
 export default routerAuth
