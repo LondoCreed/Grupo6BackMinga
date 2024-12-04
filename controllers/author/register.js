@@ -27,7 +27,7 @@ const registerAuthor = async (req, res, next) => {
             { new: true }
         );
 
-        let createdAuthor = await Author.create({...authorData, user_id  });
+        let createdAuthor = await Author.create({...authorData, user_id, active: true   });
 
         return res.status(201).json({
             success: true,

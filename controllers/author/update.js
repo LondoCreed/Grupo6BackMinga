@@ -1,4 +1,3 @@
-import { response } from "express";
 import Author from "../../models/Author.js"
 
 const updateAuthor = async (req, res, next) => {

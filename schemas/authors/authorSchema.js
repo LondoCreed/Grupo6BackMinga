@@ -74,7 +74,7 @@ const Schema = Joi.object({
             'string.hex': 'ID must contain only hexadecimal characters.',
             'any.required': 'The ID value is required.',
         }),
-
+    
 });
 
 export default Schema;
