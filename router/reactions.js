@@ -4,7 +4,7 @@ import deleteReaction from '../controllers/reactions/delete.js';
 import { allReactions, reactionById } from '../controllers/reactions/read.js';
 import updateReaction from '../controllers/reactions/update.js';
 import validator from "../middlewares/validator.js";
-import reactionSchema from "../schemas/reactionSchema.js";
+import reactionSchema from "../schemas/reactions/reactionSchema.js";
 
 
 const routerReactions = Router()
