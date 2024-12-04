@@ -11,7 +11,6 @@ const authorSchema = new Schema(
     date: { type: Date, required: true },
     photo: { type: String, required: true },
     user_id: { type: Schema.Types.ObjectId, ref: 'users', required: true },
-    active: { type: Boolean, default: false, required: true },
 }, {
     timestamps: true
 })
