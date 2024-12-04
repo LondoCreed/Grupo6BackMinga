@@ -11,7 +11,7 @@ export default async (req, res, next) => {
             });
         }
 
-        if (authorID.user_id.equals(req.user._id)) {
+        if (authorID.user_id.equals(req.user._id) || req.user.role === 3) {
             return next();
         }
 
