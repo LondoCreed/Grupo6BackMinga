@@ -20,7 +20,7 @@ const authorRouter = Router()
 
 authorRouter.get('/all', passport.authenticate('jwt', { session: false }), isAdmin, allAuthors)//hay que mirar si necesitamos otro endpoint y middlawre par evitar que solo el admin vea esto
 authorRouter.post('/register', passport.authenticate('jwt', { session: false }), validator(authorSchema), registerAuthor)
-authorRouter.put('/update', passport.authenticate('jwt', { session: false }), validator(authorSchema), sameUser, updateAuthor)
-authorRouter.delete('/delete', passport.authenticate('jwt', { session: false }), validator(deleteAuthorSchema), sameUser, deleteAuthor)
+authorRouter.put('/update', passport.authenticate('jwt', { session: false }),sameUser, validator(authorSchema),  updateAuthor)
+authorRouter.delete('/delete', passport.authenticate('jwt', { session: false }),sameUser, validator(deleteAuthorSchema),  deleteAuthor)
 
 export default authorRouter

@@ -1,3 +1,4 @@
+import Company from '../../models/Company.js'
 import Author from '../../models/Author.js';
 import User from '../../models/User.js';
 
@@ -17,6 +18,13 @@ const registerAuthor = async (req, res, next) => {
             return res.status(400).json({
                 success: false,
                 message: "User already has an author."
+            });
+        }
+        let haveCompany = await Company.findOne({ user_id });
+        if (haveCompany) {
+            return res.status(400).json({
+                success: false,
+                message: "User already has an company."
             });
         }
 
