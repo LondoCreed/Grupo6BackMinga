@@ -17,9 +17,9 @@ import deleteAuthorSchema from "../schemas/authors/delete.js";
 
 const authorRouter = Router()
 
-authorRouter.get('/all',passport.authenticate('jwt', { session: false }), allAuthors)
-authorRouter.post('/register',passport.authenticate('jwt', { session: false }), validator(authorSchema), registerAuthor)
-authorRouter.put('/update',passport.authenticate('jwt', { session: false }), validator(authorSchema), sameUser,  updateAuthor)
-authorRouter.delete('/delete',passport.authenticate('jwt', { session: false }),validator(deleteAuthorSchema), deleteAuthor)
+authorRouter.get('/all', passport.authenticate('jwt', { session: false }), allAuthors)//hay que mirar si necesitamos otro endpoint y middlawre par evitar que solo el admin vea esto
+authorRouter.post('/register', passport.authenticate('jwt', { session: false }), validator(authorSchema), registerAuthor)
+authorRouter.put('/update', passport.authenticate('jwt', { session: false }), validator(authorSchema), sameUser, updateAuthor)
+authorRouter.delete('/delete', passport.authenticate('jwt', { session: false }), validator(deleteAuthorSchema), sameUser, deleteAuthor)
 
 export default authorRouter
