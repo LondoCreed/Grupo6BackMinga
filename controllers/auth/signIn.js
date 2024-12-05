@@ -36,6 +36,7 @@ export default async (req, res, next) => {
             message: "Signed in successfully",
             response: {
                 user: {
+                    _id: updatedUser._id.toString(),
                     email: updatedUser.email,
                     password: updatedUser.password,
                     photo: updatedUser.photo,
