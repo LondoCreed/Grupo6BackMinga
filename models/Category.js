@@ -10,7 +10,7 @@ let schema = new Schema({
     description:{type:String,required:true},
     coverPhoto:{type:String,required:true},
     characterPhoto:{type:String,required:true},
-    adminId:{type:Schema.Types.ObjectId, ref:"admin", required:false}},
+    admin_id:{type:Schema.Types.ObjectId, ref:"users", required:true}},
     {
         timestamps:true
     }
