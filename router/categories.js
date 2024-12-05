@@ -15,9 +15,9 @@ import schemaCategory from "../schemas/category/create.js"
 
 const routerCategory = Router()
 
-routerCategory.get("/all",isAdmin, allCategories)
-routerCategory.post("/create", validator(schemaCategory),isAdmin, categoryCreated)
-routerCategory.put("/update",isAdmin, updateCategory)
-routerCategory.delete("/delete",isAdmin, deletedCategory)
+routerCategory.get("/all", allCategories)
+routerCategory.post("/create", validator(schemaCategory), categoryCreated)
+routerCategory.put("/update", updateCategory)
+routerCategory.delete("/delete", deletedCategory)
 
 export default routerCategory

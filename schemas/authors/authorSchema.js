@@ -64,8 +64,6 @@ const Schema = Joi.object({
             'any.required': 'The Photo URL value is required.',
         }),
     user_id: Joi.string()
-        .length(24)
-        .hex()
         .required()
         .messages({
             'string.base': 'ID must be a string.',
