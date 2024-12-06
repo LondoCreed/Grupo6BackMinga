@@ -13,7 +13,7 @@ const reactionSchema = Joi.object({
       .optional()
       .allow(null),
   reaction: Joi.string()
-      .valid('like', 'love', 'favorite', 'amazing')
+      .valid('like', 'love', 'dislike', 'amazing')
       .required()
 })
 
