@@ -18,9 +18,9 @@ import deleteCompanySchema from "../schemas/companies/delete.js";
 
 const companyRouter = Router()
 
-companyRouter.get('/all',passport.authenticate('jwt', { session: false }), allCompanies)
-companyRouter.post('/register',passport.authenticate('jwt', { session: false }), validator(companySchema), registerCompany)
-companyRouter.put('/update',passport.authenticate('jwt', { session: false }), validator(companySchema), updateCompany)
-companyRouter.delete('/delete',passport.authenticate('jwt', { session: false }), validator(deleteCompanySchema), deleteCompany)
+companyRouter.get('/all', allCompanies)
+companyRouter.post('/register', validator(companySchema), registerCompany)
+companyRouter.put('/update', validator(companySchema), updateCompany)
+companyRouter.delete('/delete', validator(deleteCompanySchema), deleteCompany)
 
 export default companyRouter
