@@ -6,11 +6,11 @@ const schemaComment = Joi.object({
         .hex()
         .required()
         .messages({
-            'string.base': 'El ID del capítulo debe ser una cadena de texto.',
-            'string.empty': 'El ID del capítulo no puede estar vacío.',
-            'string.length': 'El ID del capítulo debe tener exactamente 24 caracteres.',
-            'string.hex': 'El ID del capítulo debe contener solo caracteres hexadecimales.',
-            'any.required': 'El ID del capítulo es obligatorio.',
+            'string.base': 'The chapter ID must be a string.',
+            'string.empty': 'The chapter ID cannot be empty.',
+            'string.length': 'The chapter ID must be exactly 24 characters long.',
+            'string.hex': 'The chapter ID must contain only hexadecimal characters.',
+            'any.required': 'The chapter ID is required.',
         }),
 
     authorId: Joi.string()
@@ -18,10 +18,9 @@ const schemaComment = Joi.object({
         .hex()
         .optional()
         .messages({
-            'string.base': 'El ID del autor debe ser una cadena de texto.',
-            'string.empty': 'El ID del autor no puede estar vacío.',
-            'string.length': 'El ID del autor debe tener exactamente 24 caracteres.',
-            'string.hex': 'El ID del autor debe contener solo caracteres hexadecimales.',
+            'string.base': 'The author ID must be a string.',
+            'string.length': 'The author ID must be exactly 24 characters long.',
+            'string.hex': 'The author ID must contain only hexadecimal characters.',
         }),
 
     companyId: Joi.string()
@@ -29,10 +28,9 @@ const schemaComment = Joi.object({
         .hex()
         .optional()
         .messages({
-            'string.base': 'El ID de la empresa debe ser una cadena de texto.',
-            'string.empty': 'El ID de la empresa no puede estar vacío.',
-            'string.length': 'El ID de la empresa debe tener exactamente 24 caracteres.',
-            'string.hex': 'El ID de la empresa debe contener solo caracteres hexadecimales.',
+            'string.base': 'The company ID must be a string.',
+            'string.length': 'The company ID must be exactly 24 characters long.',
+            'string.hex': 'The company ID must contain only hexadecimal characters.',
         }),
 
     message: Joi.string()
@@ -40,9 +38,9 @@ const schemaComment = Joi.object({
         .max(500)
         .required()
         .messages({
-            'string.min': 'El mensaje debe tener al menos 5 caracteres.',
-            'string.max': 'El mensaje no puede tener más de 500 caracteres.',
-            'any.required': 'El mensaje es obligatorio.',
+            'string.min': 'The message must be at least 5 characters long.',
+            'string.max': 'The message cannot be more than 500 characters long.',
+            'any.required': 'The message is required.',
         }),
 });
 
