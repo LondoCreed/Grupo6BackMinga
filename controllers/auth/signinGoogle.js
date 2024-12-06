@@ -1,4 +1,6 @@
-import User from "../../models/User.js"; 
+import User from "../../models/User.js";
+import Author from "../../models/Author.js";
+import Company from "../../models/Company.js";
 
 export default async (req, res, next) => {
     try {
@@ -19,15 +21,23 @@ export default async (req, res, next) => {
         if (!req.token) {
             throw new Error('Authentication token not generated');
         }
+        
+        const author = await Author.findOne({ user_id: updatedUser._id });
+        const company = await Company.findOne({ user_id: updatedUser._id });
 
         const userData = {
             email: updatedUser.email,
             photo: updatedUser.photo || null,
             name: updatedUser.name || null,
             _id: updatedUser._id.toString(),
-            online: updatedUser.online
+            online: updatedUser.online,
+            role: updatedUser.role,
+            author_id: author ? author._id.toString() : null,
+            company_id: company ? company._id.toString() : null
         };
+
         const encodedUserData = encodeURIComponent(JSON.stringify(userData));
+        
         return res.redirect(
             `http://localhost:5173/auth/google/callback?` +
             `token=${encodeURIComponent(req.token)}&` +
