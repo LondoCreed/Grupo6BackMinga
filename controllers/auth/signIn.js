@@ -1,4 +1,6 @@
 import User from "../../models/User.js";
+import Author from "../../models/Author.js";
+import Company from "../../models/Company.js";
 
 export default async (req, res, next) => {
     try {
@@ -31,6 +33,19 @@ export default async (req, res, next) => {
             });
         }
 
+        let authorId = null;
+        let companyId = null;
+
+        const author = await Author.findOne({ user_id: updatedUser._id });
+        if (author) {
+            authorId = author._id;
+        }
+
+        const company = await Company.findOne({ user_id: updatedUser._id });
+        if (company) {
+            companyId = company._id;
+        }
+
         return res.status(200).json({
             success: true,
             message: "Signed in successfully",
@@ -42,6 +57,8 @@ export default async (req, res, next) => {
                     photo: updatedUser.photo,
                     role: updatedUser.role,
                     online: updatedUser.online,
+                    author_id: authorId?.toString(),
+                    company_id: companyId?.toString(),
                 },
                 token: req.token,
             },
