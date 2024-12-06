@@ -5,6 +5,7 @@ import allCompanies from "../controllers/company/read.js";
 import registerCompany from "../controllers/company/register.js";
 import updateCompany from "../controllers/company/update.js";
 import deleteCompany from "../controllers/company/delete.js";
+import getCompanyById from "../controllers/company/getById.js"; 
 
 //middlewares
 import validator from "../middlewares/validator.js";
@@ -19,6 +20,7 @@ import deleteCompanySchema from "../schemas/companies/delete.js";
 const companyRouter = Router()
 
 companyRouter.get('/all',passport.authenticate('jwt', { session: false }), allCompanies)
+companyRouter.get('/:id', passport.authenticate('jwt', { session: false }), getCompanyById);
 companyRouter.post('/register',passport.authenticate('jwt', { session: false }), validator(companySchema), registerCompany)
 companyRouter.put('/update',passport.authenticate('jwt', { session: false }), validator(companySchema), updateCompany)
 companyRouter.delete('/delete',passport.authenticate('jwt', { session: false }), validator(deleteCompanySchema), deleteCompany)
