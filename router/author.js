@@ -3,8 +3,10 @@ import { Router } from "express";
 //controllers
 import allAuthors from "../controllers/author/read.js";
 import registerAuthor from "../controllers/author/register.js";
-import updateAuthor from "../controllers/author/update.js";
+import {updateAuthor, updateAuthorByID} from "../controllers/author/update.js";
 import deleteAuthor from "../controllers/author/delete.js";
+import getAuthorById from "../controllers/author/getById.js";
+
 
 //middlewares
 import validator from "../middlewares/validator.js";
@@ -18,9 +20,12 @@ import deleteAuthorSchema from "../schemas/authors/delete.js";
 
 const authorRouter = Router()
 
-authorRouter.get('/all', passport.authenticate('jwt', { session: false }), allAuthors)//hay que mirar si necesitamos otro endpoint y middlawre par evitar que solo el admin vea esto
-authorRouter.post('/register', passport.authenticate('jwt', { session: false }), validator(authorSchema), registerAuthor)
-authorRouter.put('/update', passport.authenticate('jwt', { session: false }), validator(authorSchema),  updateAuthor)
-authorRouter.delete('/delete', passport.authenticate('jwt', { session: false }), validator(deleteAuthorSchema),  deleteAuthor)
+
+authorRouter.get('/all',  allAuthors)//hay que mirar si necesitamos otro endpoint y middlawre par evitar que solo el admin vea esto
+authorRouter.post('/register',  validator(authorSchema), registerAuthor)
+authorRouter.put('/update',  validator(authorSchema),  updateAuthor)
+authorRouter.put('/updateByID/:id',  updateAuthorByID)
+authorRouter.delete('/delete',  validator(deleteAuthorSchema),  deleteAuthor)
+authorRouter.get('/:id', passport.authenticate('jwt', { session: false }), getAuthorById);
 
 export default authorRouter
