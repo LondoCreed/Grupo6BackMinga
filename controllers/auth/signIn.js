@@ -63,6 +63,9 @@ export default async (req, res, next) => {
                     author_id: authorId?.toString(),
                     company_id: companyId?.toString(),
                     active: active,
+                    photo_company: company? company.photo:null,
+                    photo_author: author? author.photo:null,
+
                 },
                 token: req.token,
             },
