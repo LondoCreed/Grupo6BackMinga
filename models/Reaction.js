@@ -20,7 +20,7 @@ company_id: {
 reaction: {
     type: String,
     required: true,
-    enum: ['like', 'love', 'favorite', 'amazing']
+    enum: ['like', 'love', 'dislike', 'amazing', null]
 }
 }, {
 timestamps: true
