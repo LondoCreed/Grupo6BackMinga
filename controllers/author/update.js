@@ -23,6 +23,22 @@ const updateAuthor = async (req, res, next) => {
         next(error)
     }
 }
+const updateAuthorByID = async (req, res, next) => {
+    try {
+        let update = await Author.findByIdAndUpdate(
+            req.params.id,
+            req.body,
+            { new: true }
+        )
+        
+        return res.status(200).json({
+            response: update,
+            message: "Author successfully updated"
+        })
+    } catch (error) {
+        next(error)
+    }
+}
 
-export default updateAuthor
+export {updateAuthor, updateAuthorByID}
 

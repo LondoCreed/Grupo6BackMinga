@@ -22,8 +22,8 @@ const companyRouter = Router()
 
 companyRouter.get('/all', allCompanies)
 companyRouter.post('/register', validator(companySchema), registerCompany)
-companyRouter.put('/update', validator(companySchema), updateCompany)
+companyRouter.put('/update/:id', /* validator(companySchema), */ updateCompany)
 companyRouter.delete('/delete', validator(deleteCompanySchema), deleteCompany)
-companyRouter.get('/:id', passport.authenticate('jwt', { session: false }), getCompanyById);
+companyRouter.get('/:id',/*  passport.authenticate('jwt', { session: false }), */ getCompanyById);
 
 export default companyRouter
