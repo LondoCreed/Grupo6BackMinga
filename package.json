@@ -13,7 +13,8 @@
     "dataAuthor": "node ./models/data/authors.js",
     "dataCompany": "node ./models/data/companies.js",
     "dataCategory":"node ./models/data/categories.js",
-    "dataComment":"node ./models/data/comments.js"
+    "dataComment":"node ./models/data/comments.js",
+    "dataReactions":"node ./models/data/reactions.js"
   },
   "keywords": [],
   "author": "",
