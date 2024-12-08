@@ -1,8 +1,9 @@
-import Comnpany from "../../models/Company.js"
+import Company from "../../models/Company.js"
 
 const deleteCompany = async (req, res, next) => {
     try {
-         const deleted = await Comnpany.findByIdAndDelete(req.body._id)
+        const { id } = req.params
+        const deleted = await Company.findByIdAndDelete(id)
 
         return res.status(200).json({
             success: true,
