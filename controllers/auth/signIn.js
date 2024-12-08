@@ -49,6 +49,11 @@ export default async (req, res, next) => {
             active = company.active;
         }
 
+        if (!updatedUser?.role === 3) {
+            response.response.user.nameAuhtor = `${author?.name} ${author?.last_name}`;
+        }
+
+
         return res.status(200).json({
             success: true,
             message: "Signed in successfully",
@@ -62,7 +67,6 @@ export default async (req, res, next) => {
                     online: updatedUser.online,
                     author_id: authorId?.toString(),
                     photo_author: author?.photo,
-                    nameAuhtor: authorId?.name && authorId?.last_name,
                     nameCompany: company?.name,
                     company_id: companyId?.toString(),
                     active: active,
