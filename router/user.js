@@ -21,7 +21,7 @@ const router = Router()
 
 router.get('/all', allUsers)
 router.post('/register', validator(registerSchema), accountExists, createHash, generateToken, registerUser)
-router.put('/update', validator(updateSchema), updateUser)
+router.put('/update', validator(updateSchema),createHash, updateUser)
 router.delete('/delete',validator(deleteSchema), deleteUser)
 
 export default router

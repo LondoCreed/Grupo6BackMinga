@@ -25,7 +25,7 @@ authorRouter.get('/all',  allAuthors)//hay que mirar si necesitamos otro endpoin
 authorRouter.post('/register',  validator(authorSchema), registerAuthor)
 authorRouter.put('/update',  validator(authorSchema),  updateAuthor)
 authorRouter.put('/updateByID/:id',  updateAuthorByID)
-authorRouter.delete('/delete',  validator(deleteAuthorSchema),  deleteAuthor)
+authorRouter.delete('/delete/:id',  /* validator(deleteAuthorSchema),*/  deleteAuthor)
 authorRouter.get('/:id', passport.authenticate('jwt', { session: false }), getAuthorById);
 
 export default authorRouter

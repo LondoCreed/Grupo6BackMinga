@@ -35,16 +35,24 @@ export default async (req, res, next) => {
 
         let authorId = null;
         let companyId = null;
+        let active = null
 
         const author = await Author.findOne({ user_id: updatedUser._id });
         if (author) {
             authorId = author._id;
+            active = author.active;
         }
 
         const company = await Company.findOne({ user_id: updatedUser._id });
         if (company) {
             companyId = company._id;
+            active = company.active;
         }
+
+        if (!updatedUser?.role === 3) {
+            response.response.user.nameAuhtor = `${author?.name} ${author?.last_name}`;
+        }
+
 
         return res.status(200).json({
             success: true,
@@ -59,9 +67,9 @@ export default async (req, res, next) => {
                     online: updatedUser.online,
                     author_id: authorId?.toString(),
                     photo_author: author?.photo,
-                    nameAuhtor: authorId?.name && authorId?.last_name,
                     nameCompany: company?.name,
                     company_id: companyId?.toString(),
+                    active: active,
                     photo_company: company?.photo,
                 },
                 token: req.token,

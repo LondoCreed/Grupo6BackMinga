@@ -33,7 +33,10 @@ export default async (req, res, next) => {
             online: updatedUser.online,
             role: updatedUser.role,
             author_id: author ? author._id.toString() : null,
-            company_id: company ? company._id.toString() : null
+            company_id: company ? company._id.toString() : null,
+            active: author ? author.active : company ? company.active : null,
+            photo_author: author ? author.photo : null,
+            photo_company: company ? company.photo : null
         };
 
         const encodedUserData = encodeURIComponent(JSON.stringify(userData));
