@@ -12,6 +12,6 @@ routerComment.get("/all", allComments)
 routerComment.get("/comentschapter/:id", commentsChapter)
 routerComment.post("/create",validator(schemaComment), commentCreated)
 routerComment.put("/update", updateComment)
-routerComment.delete("/delete", deletedComment)
+routerComment.delete("/delete/:id", deletedComment)
 
 export default routerComment
