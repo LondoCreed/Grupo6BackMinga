@@ -13,6 +13,7 @@ let registerUser = async (req, res, next) => {
             success: true,
             response: {
                 user: {
+                    _id: newUser._id.toString(),
                     email: newUser.email,
                     photo: newUser.photo,
                     online: true
