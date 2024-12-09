@@ -4,7 +4,7 @@ let collection = "reactions"
 let reactionSchema = new Schema({
   manga_id: {
     type: Schema.Types.ObjectId,
-    ref: 'Manga',
+    ref: 'mangas',
     required: true
 },
 author_id: {

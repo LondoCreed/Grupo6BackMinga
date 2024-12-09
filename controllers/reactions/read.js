@@ -1,8 +1,15 @@
 import Reaction from '../../models/Reaction.js';
-
+import Manga from '../../models/Manga.js';
+import Category from '../../models/Category.js';
 let allReactions = async (req, res, next) => {
     try { 
-        let all = await Reaction.find()
+        let all = await Reaction.find().populate({
+            path: "manga_id",
+            populate: {
+                path: "category_id"
+                
+            }
+        });
         if (!all.length) {
             return res.status(404).json({ message: "No reactions found" });
         }
