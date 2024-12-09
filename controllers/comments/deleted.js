@@ -2,8 +2,6 @@ import Comment from "../../models/Comment.js"
 
 const deletedComment = async (req, res, next) => {
     try {
-        console.log(req.params);
-
         let deleted = await Comment.findByIdAndDelete(req.params.id)
         return res.status(200).json({
             sucess: true,
