@@ -11,7 +11,7 @@ let allChapters = async (req, res, next) => {
         if (order && !isNaN(order)) {
             query.order = Number(order)
         } else if (order) {
-            return res.status(400).json({ error: "'order' must be a number" });
+            return res.status(400).json({ error: "'order' must be a number" })
         }
         if (manga_id) {
             query.manga_id = manga_id

@@ -1,4 +1,4 @@
-import Joi from "joi-oid";
+import Joi from "joi-oid"
 
 // Esquema para los parámetros de búsqueda de todos los capítulos
 export const createChaptersSchema = Joi.object({

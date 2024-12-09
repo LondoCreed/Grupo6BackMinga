@@ -7,7 +7,7 @@ import validatorBody from "../middlewares/validatorBody.js"
 import validatorParams from "../middlewares/validatorParams.js"
 import validatorQuery from "../middlewares/validatorQuery.js"
 import { allChaptersSchema, chapterByIDSchema } from "../schemas/chapters/read.js"
-import { schemaTitle, schemaTitleAndMangaID } from "../schemas/chapters/delete.js"
+import { schemaTitle} from "../schemas/chapters/delete.js"
 import { createChaptersSchema } from "../schemas/chapters/create.js"
 const router = Router()
 
