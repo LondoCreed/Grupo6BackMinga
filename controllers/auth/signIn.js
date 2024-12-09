@@ -48,9 +48,17 @@ export default async (req, res, next) => {
             companyId = company._id;
             active = company.active;
         }
+       
+        let nameAuthor = null;
+        let nameCompany = null;
 
-        if (!updatedUser?.role === 3) {
-            response.response.user.nameAuhtor = `${author?.name} ${author?.last_name}`;
+        if (updatedUser?.role === 1) {
+            nameAuthor = `${author?.name} ${author?.last_name}`;
+            // Para depurar
+        }
+        if (updatedUser?.role === 2) {
+            nameCompany = `${company?.name}`;
+             // Para depurar
         }
 
 
@@ -66,11 +74,12 @@ export default async (req, res, next) => {
                     role: updatedUser.role,
                     online: updatedUser.online,
                     author_id: authorId?.toString(),
+                    nameAuhtor: nameAuthor,
                     photo_author: author?.photo,
-                    nameCompany: company?.name,
+                    nameCompany: nameCompany,
                     company_id: companyId?.toString(),
-                    active: active,
                     photo_company: company?.photo,
+                    active: active,
                 },
                 token: req.token,
             },
