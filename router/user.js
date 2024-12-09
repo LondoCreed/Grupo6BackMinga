@@ -3,7 +3,7 @@ import { Router } from "express";
 //controllers
 import allUsers from "../controllers/user/read.js";
 import registerUser from "../controllers/user/register.js";
-import updateUser from "../controllers/user/update.js";
+import { update, updateRole } from "../controllers/user/update.js";
 import deleteUser from "../controllers/user/delete.js";
 import accountExists from "../middlewares/accountExists.js";
 import createHash from "../middlewares/createHash.js";
@@ -21,7 +21,8 @@ const router = Router()
 
 router.get('/all', allUsers)
 router.post('/register', validator(registerSchema), accountExists, createHash, generateToken, registerUser)
-router.put('/update', validator(updateSchema), updateUser)
+router.put('/update', validator(updateSchema), update)
+router.put('/updateRole', updateRole)
 router.delete('/delete',validator(deleteSchema), deleteUser)
 
 export default router
