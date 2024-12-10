@@ -3,7 +3,19 @@ import Manga from '../../models/Manga.js';
 import Category from '../../models/Category.js';
 let allReactions = async (req, res, next) => {
     try { 
-        let all = await Reaction.find().populate({
+        let {author_id, company_id, category_id} = req.query
+        let query = {}
+        
+        if (author_id) {
+            query.author_id = author_id
+        }
+        if (company_id) {
+            query.company_id = company_id
+        }
+        if (category_id) {
+            query.category_id = category_id
+        }
+        let all = await Reaction.find(query).populate({
             path: "manga_id",
             populate: {
                 path: "category_id"
