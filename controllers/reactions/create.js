@@ -1,38 +1,53 @@
-import Reaction from '../../models/Reaction.js'
+import Reaction from '../../models/Reaction.js';
 
 const createReaction = async (req, res, next) => {
   try {
-    let reactionData = req.body
-    let searchReaction=await Reaction.exists({manga_id:req.body.manga_id,author_id:req.body.author_id||req.body.company_id})
-    console.log(req.body);
-    
-    if(searchReaction){
-      let updateReaction = await Reaction.findOneAndUpdate( 
-        {
-          manga_id: req.body.manga_id, 
-          author_id: req.body.author_id || req.body.company_id, 
-        },
-        req.body,)
-        if (updateReaction) {
-          return res.status(200).json({
-            success: true,
-            message: "Reaction successfully updated",
-            response: updateReaction
-          });
-        }
-    }else{
-      let newReaction = await Reaction.create(reactionData)
-      return res.status(201).json({
-        message: "Reaction successfully created",
-        response: newReaction
-      })
-    }
-    
-    
-    
-  } catch (error) {
-    next(error)
-  }
-}
+    const { manga_id, reaction, author_id, company_id } = req.body;
 
-export default createReaction
+
+
+    const searchReaction = await Reaction.exists({
+      manga_id: manga_id,
+      $or: [
+        { author_id: author_id },
+        { company_id: company_id },
+      ],
+    });
+
+    if (searchReaction) {
+     
+      const updateReaction = await Reaction.findOneAndUpdate(
+        {
+          manga_id: manga_id,
+          $or: [
+            { author_id: author_id },
+            { company_id: company_id },
+          ],
+        },
+        req.body,
+        { new: true }
+      );
+      console.log(updateReaction);
+      
+      if (updateReaction) {
+        return res.status(200).json({
+          success: true,
+          message: "Reacción actualizada exitosamente",
+          response: updateReaction,
+        });
+      }
+    } else {
+
+      const newReaction = await Reaction.create(req.body);
+      return res.status(201).json({
+        success: true,
+        message: "Reacción creada exitosamente",
+        response: newReaction,
+      });
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+
+export default createReaction;
