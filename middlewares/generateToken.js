@@ -17,7 +17,7 @@ export default (req, res, next) => {
         const token = jwt.sign(
             { email },
             process.env.SECRET,
-            { expiresIn: 60 * 60 * 24 }
+            { expiresIn: 60 * 60 * 24 * 4}
         );
 
         req.token = token;
