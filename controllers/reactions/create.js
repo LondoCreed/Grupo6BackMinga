@@ -13,6 +13,7 @@ const createReaction = async (req, res, next) => {
         { company_id: company_id },
       ],
     });
+    
 
     if (searchReaction) {
      
